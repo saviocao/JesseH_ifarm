@@ -1,0 +1,73 @@
+ls: cannot access root://nod25.phys.uconn.edu/Gluex/rawdata/random_triggers/none/run030274_random.hddm: Stale file handle
+ls: cannot access root://nod25.phys.uconn.edu/Gluex/rawdata/random_triggers/none/run030274_random.hddm: Connection refused
+Error in <TSystem::ExpandFileName>: input: $HOME/.root.mimes, output: $HOME/.root.mimes
+Using runNo: 30274
+Maximum number of events: 10000
+Opening file genr8_030274_001.ascii for output. 
+Reading: 	targetp.x 	targetp.y 	targetp.z 	targetMass
+Found: 		0.000000 	0.000000 	0.000000 	0.938272 
+Reading: t-channelSlope
+Found: 	1.400000 
+Reading: number of particles need to describe the decay
+Found: 	4 
+Reading: 	part# 	chld1# 	chld2# 	prnt# 	Id 	nchld 	mass 		width 		chrg 	flag  
+Found: 		0 	-1 	-1 	-1 	11 	0 	0.493677 	0.000000 	1 	11
+Found: 		1 	2 	3 	-1 	0 	2 	2.000000 	0.400000 	0 	0
+Found: 		2 	2 	3 	1 	11 	0 	0.493677 	0.000000 	1 	11
+Found: 		3 	2 	3 	1 	23 	0 	1.321710 	0.000000 	-1 	10
+Found EOI----  Input File appears Fine.
+Calculating Lorentz Factor: 9000 Calculating Lorentz Factor: 8000 Calculating Lorentz Factor: 7000 Calculating Lorentz Factor: 6000 Calculating Lorentz Factor: 5000 Calculating Lorentz Factor: 4000 Calculating Lorentz Factor: 3000 Calculating Lorentz Factor: 2000 Calculating Lorentz Factor: 1000 Calculating Lorentz Factor: 100 Calculating Lorentz Factor: 90 Calculating Lorentz Factor: 80 Calculating Lorentz Factor: 70 Calculating Lorentz Factor: 60 Calculating Lorentz Factor: 50 Calculating Lorentz Factor: 40 Calculating Lorentz Factor: 30 Calculating Lorentz Factor: 20 Calculating Lorentz Factor: 10 Calculating Lorentz Factor: 0 Events generated: 100 Events accepted: 33 Events generated: 200 Events accepted: 51 Events generated: 300 Events accepted: 83 Events generated: 400 Events accepted: 108 Events generated: 500 Events accepted: 138 Events generated: 600 Events accepted: 170 Events generated: 700 Events accepted: 197 Events generated: 800 Events accepted: 221 Events generated: 900 Events accepted: 250 Events generated: 1000 Events accepted: 274 Events generated: 10000 Events accepted: 2740 Events generated: 20000 Events accepted: 5525 Events generated: 30000 Events accepted: 8355 Max Lorentz Factor:1.555940 Events generated:35918 Events accepted:10000
+
+Error in <TSystem::ExpandFileName>: input: $HOME/.root.mimes, output: $HOME/.root.mimes
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 44 11.1M   44 5085k    0     0  5087k      0  0:00:02 --:--:--  0:00:02 5085k100 11.1M  100 11.1M    0     0  6887k      0  0:00:01  0:00:01 --:--:-- 6888k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  1  121M    1 1789k    0     0  2401k      0  0:00:51 --:--:--  0:00:51 2401k  5  121M    5 6648k    0     0  3814k      0  0:00:32  0:00:01  0:00:31 3814k  9  121M    9 11.7M    0     0  4376k      0  0:00:28  0:00:02  0:00:26 4376k 13  121M   13 16.9M    0     0  4624k      0  0:00:26  0:00:03  0:00:23 4624k 17  121M   17 21.5M    0     0  4640k      0  0:00:26  0:00:04  0:00:22 4640k 23  121M   23 29.0M    0     0  5179k      0  0:00:24  0:00:05  0:00:19 5593k 29  121M   29 35.4M    0     0  5383k      0  0:00:23  0:00:06  0:00:17 5930k 34  121M   34 42.1M    0     0  5580k      0  0:00:22  0:00:07  0:00:15 6240k 40  121M   40 49.3M    0     0  5772k      0  0:00:21  0:00:08  0:00:13 6630k 45  121M   45 54.7M    0     0  5745k      0  0:00:21  0:00:09  0:00:12 6795k 48  121M   48 58.9M    0     0  5618k      0  0:00:22  0:00:10  0:00:12 6123k 53  121M   53 64.5M    0     0  5624k      0  0:00:22  0:00:11  0:00:11 5948k 58  121M   58 70.9M    0     0  5698k      0  0:00:21  0:00:12  0:00:09 5882k 64  121M   64 78.2M    0     0  5830k      0  0:00:21  0:00:13  0:00:08 5932k 70  121M   70 85.9M    0     0  5965k      0  0:00:20  0:00:14  0:00:06 6396k 78  121M   78 94.8M    0     0  6167k      0  0:00:20  0:00:15  0:00:05 7346k 84  121M   84  102M    0     0  6255k      0  0:00:19  0:00:16  0:00:03 7737k 86  121M   86  104M    0     0  6036k      0  0:00:20  0:00:17  0:00:03 6897k 92  121M   92  112M    0     0  6129k      0  0:00:20  0:00:18  0:00:02 6951k 94  121M   94  115M    0     0  5977k      0  0:00:20  0:00:19  0:00:01 6013k 98  121M   98  120M    0     0  5938k      0  0:00:20  0:00:20 --:--:-- 5217k 98  121M   98  120M    0     0  5572k      0  0:00:22  0:00:22 --:--:-- 3439k100  121M  100  121M    0     0  5626k      0  0:00:22  0:00:22 --:--:-- 3961k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  266k  100  266k    0     0   212k      0  0:00:01  0:00:01 --:--:--  212k
+Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT3 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT2 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT0 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT1 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT7 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT4 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT5 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT6 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+Error in <TSystem::ExpandFileName>: input: $HOME/.root.mimes, output: $HOME/.root.mimes
+Error in <TSystem::ExpandFileName>: input: $HOME/.root.mimes, output: $HOME/.root.mimes
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.ccsrc/JANA/JGeometryXML.ccsrc/JANA/JGeometryXML.cc::348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.:
+348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".348 
+libraries/HDGEOMETRY/DGeometry.cc:1741Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z Unable to retrieve DIRC position.
+".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348src/JANA/JGeometryXML.ccsrc/JANA/JGeometryXML.ccsrc/JANA/JGeometryXML.cc:348src/JANA/JGeometryXML.cc:348:348src/JANA/JGeometryXML.cc::  Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z348  libraries/HDGEOMETRY/DGeometry.cc:348 1741Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+ Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+".libraries/HDGEOMETRY/DGeometry.cc:Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_ZUnable to retrieve DIRC position.".
+".
+libraries/HDGEOMETRY/DGeometry.cc:1741 libraries/HDGEOMETRY/DGeometry.cclibraries/HDGEOMETRY/DGeometry.cc
+Unable to retrieve DIRC position.
+
+:1741 Unable to retrieve DIRC position.
+:1741 1741libraries/HDGEOMETRY/DGeometry.cc: Unable to retrieve DIRC position.1741 
+Unable to retrieve DIRC position.
+Unable to retrieve DIRC position.

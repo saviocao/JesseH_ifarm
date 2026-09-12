@@ -1,0 +1,128 @@
+ls: cannot access root://nod25.phys.uconn.edu/Gluex/rawdata/random_triggers/none/run030274_random.hddm: Stale file handle
+ls: cannot access root://nod25.phys.uconn.edu/Gluex/rawdata/random_triggers/none/run030274_random.hddm: Connection refused
+Error in <TSystem::ExpandFileName>: input: $HOME/.root.mimes, output: $HOME/.root.mimes
+Using runNo: 30274
+Maximum number of events: 10000
+Opening file genr8_030274_003.ascii for output. 
+Reading: 	targetp.x 	targetp.y 	targetp.z 	targetMass
+Found: 		0.000000 	0.000000 	0.000000 	0.938272 
+Reading: t-channelSlope
+Found: 	1.400000 
+Reading: number of particles need to describe the decay
+Found: 	4 
+Reading: 	part# 	chld1# 	chld2# 	prnt# 	Id 	nchld 	mass 		width 		chrg 	flag  
+Found: 		0 	-1 	-1 	-1 	11 	0 	0.493677 	0.000000 	1 	11
+Found: 		1 	2 	3 	-1 	0 	2 	2.000000 	0.400000 	0 	0
+Found: 		2 	2 	3 	1 	11 	0 	0.493677 	0.000000 	1 	11
+Found: 		3 	2 	3 	1 	23 	0 	1.321710 	0.000000 	-1 	10
+Found EOI----  Input File appears Fine.
+Calculating Lorentz Factor: 9000 Calculating Lorentz Factor: 8000 Calculating Lorentz Factor: 7000 Calculating Lorentz Factor: 6000 Calculating Lorentz Factor: 5000 Calculating Lorentz Factor: 4000 Calculating Lorentz Factor: 3000 Calculating Lorentz Factor: 2000 Calculating Lorentz Factor: 1000 Calculating Lorentz Factor: 100 Calculating Lorentz Factor: 90 Calculating Lorentz Factor: 80 Calculating Lorentz Factor: 70 Calculating Lorentz Factor: 60 Calculating Lorentz Factor: 50 Calculating Lorentz Factor: 40 Calculating Lorentz Factor: 30 Calculating Lorentz Factor: 20 Calculating Lorentz Factor: 10 Calculating Lorentz Factor: 0 Events generated: 100 Events accepted: 27 Events generated: 200 Events accepted: 61 Events generated: 300 Events accepted: 93 Events generated: 400 Events accepted: 120 Events generated: 500 Events accepted: 145 Events generated: 600 Events accepted: 174 Events generated: 700 Events accepted: 203 Events generated: 800 Events accepted: 231 Events generated: 900 Events accepted: 255 Events generated: 1000 Events accepted: 288 Events generated: 10000 Events accepted: 2816 Events generated: 20000 Events accepted: 5550 Events generated: 30000 Events accepted: 8388 Max Lorentz Factor:1.550788 Events generated:35567 Events accepted:10000
+
+Error in <TSystem::ExpandFileName>: input: $HOME/.root.mimes, output: $HOME/.root.mimes
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 45 11.1M   45 5164k    0     0  4581k      0  0:00:02  0:00:01  0:00:01 4578k 84 11.1M   84 9656k    0     0  4501k      0  0:00:02  0:00:02 --:--:-- 4501k100 11.1M  100 11.1M    0     0  4258k      0  0:00:02  0:00:02 --:--:-- 4258k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0  121M    0  710k    0     0   728k      0  0:02:50 --:--:--  0:02:50  728k 11  121M   11 13.5M    0     0  7050k      0  0:00:17  0:00:01  0:00:16 7047k 20  121M   20 24.8M    0     0  8576k      0  0:00:14  0:00:02  0:00:12 8574k 30  121M   30 37.1M    0     0  9599k      0  0:00:12  0:00:03  0:00:09 9599k 41  121M   41 50.3M    0     0  10.1M      0  0:00:11  0:00:04  0:00:07 10.1M 50  121M   50 61.6M    0     0  10.3M      0  0:00:11  0:00:05  0:00:06 12.2M 60  121M   60 73.5M    0     0  10.5M      0  0:00:11  0:00:06  0:00:05 11.9M 71  121M   71 86.7M    0     0  10.8M      0  0:00:11  0:00:07  0:00:04 12.3M 71  121M   71 86.7M    0     0  9666k      0  0:00:12  0:00:09  0:00:03 9719k 80  121M   80 98.2M    0     0   9.8M      0  0:00:12  0:00:09  0:00:03 9804k 89  121M   89  109M    0     0   9.9M      0  0:00:12  0:00:10  0:00:02 9767k 99  121M   99  121M    0     0  10.1M      0  0:00:11  0:00:11 --:--:-- 9811k100  121M  100  121M    0     0  10.1M      0  0:00:11  0:00:11 --:--:-- 8889k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  266k  100  266k    0     0   670k      0 --:--:-- --:--:-- --:--:--  672k
+Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT5 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT1 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT2 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT0 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT6 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT3 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT7 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT4 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT7 > GlueXSensitiveDetectorBCAL::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+G4WT6 > GlueXSensitiveDetectorFDC::ProcessHits error: max hit count 100 exceeded, truncating!
+Error in <TSystem::ExpandFileName>: input: $HOME/.root.mimes, output: $HOME/.root.mimes
+Error in <TSystem::ExpandFileName>: input: $HOME/.root.mimes, output: $HOME/.root.mimes
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.ccsrc/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".src/JANA/JGeometryXML.ccsrc/JANA/JGeometryXML.ccsrc/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+src/JANA/JGeometryXML.cc
+:348 Node or attribute not found for xpath "libraries/HDGEOMETRY/DGeometry.cc:1741:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Zsrc/JANA/JGeometryXML.cc//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z libraries/HDGEOMETRY/DGeometry.cc::348".:".
+1741libraries/HDGEOMETRY/DGeometry.cc:1741
+348 Unable to retrieve DIRC position.
+  Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_ZNode or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+:1741 Unable to retrieve DIRC position.
+Unable to retrieve DIRC position.
+ Unable to retrieve DIRC position.
+".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348src/JANA/JGeometryXML.cc: 348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "src/JANA/JGeometryXML.cc//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".:
+348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:libraries/HDGEOMETRY/DGeometry.cc1741 Unable to retrieve DIRC position.
+:1741 Unable to retrieve DIRC position.
