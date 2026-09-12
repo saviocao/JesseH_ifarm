@@ -1,0 +1,168 @@
+Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT2 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT0 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT1 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT3 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+
+
+
+===========================================================
+There was a crash.
+This is the entire stack trace of all threads:
+===========================================================
+
+Thread 3 (Thread 0x7f2536dc1700 (LWP 1993394)):
+#0  0x00007f253db19b3b in do_futex_wait.constprop.1 () from /lib64/libpthread.so.0
+#1  0x00007f253db19bcf in __new_sem_wait_slow.constprop.0 () from /lib64/libpthread.so.0
+#2  0x00007f253db19c6b in sem_wait
+
+GLIBC_2.2.5 () from /lib64/libpthread.so.0
+#3  0x00007f253cb00718 in XrdPosixFile::DelayedDestroy(void*) () from /lib64/libXrdPosix.so.3
+#4  0x00007f2539dec9c7 in XrdSysThread_Xeq () from /lib64/libXrdUtils.so.3
+#5  0x00007f253db13ea5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f253ce18b0d in clone () from /lib64/libc.so.6
+
+Thread 2 (Thread 0x7f25215c7700 (LWP 1993417)):
+#0  0x00007f253cddf659 in waitpid () from /lib64/libc.so.6
+#1  0x00007f253cd5cf62 in do_system () from /lib64/libc.so.6
+#2  0x00007f253cd5d311 in system () from /lib64/libc.so.6
+#3  0x00007f25436e33f9 in TUnixSystem::StackTrace (this=0x2c05620) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/unix/src/TUnixSystem.cxx:2405
+#4  0x00007f25436e5ccc in TUnixSystem::DispatchSignals (this=0x2c05620, sig=kSigSegmentationViolation) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/unix/src/TUnixSystem.cxx:3625
+#5  <signal handler called>
+#6  size (this=0x2c51d48) at /usr/include/c++/4.8.2/bits/basic_string.h:716
+#7  compare (__str="10TBranchRef", this=0x2c51d48) at /usr/include/c++/4.8.2/bits/basic_string.h:2227
+#8  operator< <char, std::char_traits<char>, std::allocator<char> > (__rhs="10TBranchRef", __lhs=<error reading variable: Cannot access memory at address 0x44>) at /usr/include/c++/4.8.2/bits/basic_string.h:2571
+#9  operator() (this=0x2c51d20, __y="10TBranchRef", __x=<error reading variable: Cannot access memory at address 0x44>) at /usr/include/c++/4.8.2/bits/stl_function.h:235
+#10 std::_Rb_tree<std::string, std::pair<std::string const, TClass*>, std::_Select1st<std::pair<std::string const, TClass*> >, std::less<std::string>, std::allocator<std::pair<std::string const, TClass*> > >::_M_get_insert_hint_unique_pos (this=this
+entry=0x2c51d20, __position=__position
+entry=..., __k="10TBranchRef") at /usr/include/c++/4.8.2/bits/stl_tree.h:1433
+#11 0x00007f25436a64a0 in std::_Rb_tree<std::string, std::pair<std::string const, TClass*>, std::_Select1st<std::pair<std::string const, TClass*> >, std::less<std::string>, std::allocator<std::pair<std::string const, TClass*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::string const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<std::string const, TClass*> >, std::piecewise_construct_t const&, std::tuple<std::string const&>&&, std::tuple<>&&) (this=this
+entry=0x2c51d20, __pos=__pos
+entry=...) at /usr/include/c++/4.8.2/bits/stl_tree.h:1673
+#12 0x00007f2543699a66 in operator[] (__k="10TBranchRef", this=0x2c51d20) at /usr/include/c++/4.8.2/bits/stl_map.h:465
+#13 Add (obj=<synthetic pointer>, key="10TBranchRef", this=0x2c51d20) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:355
+#14 TClass::AddClass (cl=cl
+entry=0x7f24cea8aa70) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:468
+#15 0x00007f254369ab57 in TClass::Init (this=this
+entry=0x7f24cea8aa70, name=name
+entry=0x7f2541ca4235 "TBranchRef", cversion=cversion
+entry=1, typeinfo=typeinfo
+entry=0x7f2541ed9a80 <typeinfo for TBranchRef>, isa=isa
+entry=0x2c7fa70, dfil=dfil
+entry=0x7f2541ca4228 "TBranchRef.h", ifil=ifil
+entry=0x7f2541ca7cd0 "/u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/tree/tree/src/TBranchRef.cxx", dl=dl
+entry=33, il=il
+entry=41, givenInfo=givenInfo
+entry=0x0, silent=silent
+entry=false) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:1393
+#16 0x00007f25436a38e0 in TClass::TClass (this=0x7f24cea8aa70, name=0x7f2541ca4235 "TBranchRef", cversion=<optimized out>, info=..., isa=0x2c7fa70, dfil=0x7f2541ca4228 "TBranchRef.h", ifil=0x7f2541ca7cd0 "/u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/tree/tree/src/TBranchRef.cxx", dl=33, il=41, silent=false) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:1290
+#17 0x00007f25436a3df4 in ROOT::CreateClass (cname=0x7f2541ca4235 "TBranchRef", id=<optimized out>, info=..., isa=0x2c7fa70, dfil=0x7f2541ca4228 "TBranchRef.h", ifil=0x7f2541ca7cd0 "/u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/tree/tree/src/TBranchRef.cxx", dl=33, il=41) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:5521
+#18 0x00007f25436b061e in ROOT::TGenericClassInfo::GetClass (this=0x7f2541ee8e00 <ROOT::GenerateInitInstanceLocal(TBranchRef const*)::instance>) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TGenericClassInfo.cxx:214
+#19 0x00007f2541c2ecf1 in TBranchRef::Dictionary () at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/build_dir/tree/tree/G__Tree.cxx:2396
+#20 0x00007f254369c272 in TClass::GetClass (name=0x7f24cead54b1 "TBranchRef", load=true, silent=<optimized out>) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:2940
+#21 0x00007f25430a88b8 in TStreamerInfo::Build (this=0x7f24ce3c2460) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/io/io/src/TStreamerInfo.cxx:524
+#22 0x00007f254304623d in TBufferFile::WriteClassBuffer (this=this
+entry=0x7f24e71780e0, cl=0x7f24f5954910, pointer=pointer
+entry=0x7f2511045590) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/io/io/src/TBufferFile.cxx:3934
+#23 0x00007f2541c9616c in TTree::Streamer (this=0x7f2511045590, b=...) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/tree/tree/src/TTree.cxx:8884
+#24 0x00007f2543095502 in TKey::TKey (this=0x7f24e6b72330, obj=0x7f2511045590, name=0x7f25110432f0 "kpkpxim__B4_M23_Tree", bufsize=1024, motherDir=<optimized out>) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/io/io/src/TKey.cxx:251
+#25 0x00007f25430655f5 in TFile::CreateKey (this=<optimized out>, mother=0x7f2511043400, obj=0x7f2511045590, name=0x7f25110432f0 "kpkpxim__B4_M23_Tree", bufsize=1024) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/io/io/src/TFile.cxx:1002
+#26 0x00007f254305e7f3 in TDirectoryFile::WriteTObject (this=0x7f2511043400, obj=0x7f2511045590, name=<optimized out>, option=<optimized out>, bufsize=0) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/io/io/src/TDirectoryFile.cxx:1869
+#27 0x00007f25436122f1 in TObject::Write (this=0x7f2511045590, name=0x0, option=<optimized out>, bufsize=0) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/base/src/TObject.cxx:816
+#28 0x00007f254305cc61 in TDirectoryFile::Write (this=this
+entry=0x7f2511043400, opt=opt
+entry=2, bufsize=bufsize
+entry=0) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/io/io/src/TDirectoryFile.cxx:1749
+#29 0x00007f254307655b in TFile::Write (this=0x7f2511043400, opt=2, bufsiz=0) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/io/io/src/TFile.cxx:2285
+#30 0x0000000000895875 in DTreeInterface::~DTreeInterface() ()
+#31 0x00000000006e66a9 in DEventWriterROOT::~DEventWriterROOT() ()
+#32 0x00000000006e68b9 in DEventWriterROOT::~DEventWriterROOT() ()
+#33 0x00000000006546c6 in DEventWriterROOT_factory::fini() ()
+#34 0x00000000010fc7d1 in jana::JEventLoop::~JEventLoop (this=0x7f250c0008c0, __in_chrg=<optimized out>) at src/JANA/JEventLoop.cc:123
+#35 0x00000000010fcd99 in jana::JEventLoop::~JEventLoop (this=0x7f250c0008c0, __in_chrg=<optimized out>) at src/JANA/JEventLoop.cc:152
+#36 0x00000000010d5d77 in ~__pthread_cleanup_class (this=<synthetic pointer>, __in_chrg=<optimized out>) at /usr/include/pthread.h:555
+#37 LaunchThread (arg=0x7ffc244524c0) at src/JANA/JApplication.cc:1391
+#38 0x00007f253db13ea5 in start_thread () from /lib64/libpthread.so.0
+#39 0x00007f253ce18b0d in clone () from /lib64/libc.so.6
+
+Thread 1 (Thread 0x7f25447212c0 (LWP 1993393)):
+#0  0x00007f253db15017 in pthread_join () from /lib64/libpthread.so.0
+#1  0x00000000010dfa38 in jana::JApplication::Run (this=0x7ffc244524c0, proc=<optimized out>, Nthreads=<optimized out>) at src/JANA/JApplication.cc:1809
+#2  0x000000000063250c in main ()
+===========================================================
+
+
+The lines below might hint at the cause of the crash.
+You may get help by asking at the ROOT forum http://root.cern.ch/forum.
+Only if you are really convinced it is a bug in ROOT then please submit a
+report at http://root.cern.ch/bugs. Please post the ENTIRE stack trace
+from above as an attachment in addition to anything else
+that might help us fixing this issue.
+===========================================================
+#6  size (this=0x2c51d48) at /usr/include/c++/4.8.2/bits/basic_string.h:716
+#7  compare (__str="10TBranchRef", this=0x2c51d48) at /usr/include/c++/4.8.2/bits/basic_string.h:2227
+#8  operator< <char, std::char_traits<char>, std::allocator<char> > (__rhs="10TBranchRef", __lhs=<error reading variable: Cannot access memory at address 0x44>) at /usr/include/c++/4.8.2/bits/basic_string.h:2571
+#9  operator() (this=0x2c51d20, __y="10TBranchRef", __x=<error reading variable: Cannot access memory at address 0x44>) at /usr/include/c++/4.8.2/bits/stl_function.h:235
+#10 std::_Rb_tree<std::string, std::pair<std::string const, TClass*>, std::_Select1st<std::pair<std::string const, TClass*> >, std::less<std::string>, std::allocator<std::pair<std::string const, TClass*> > >::_M_get_insert_hint_unique_pos (this=this
+entry=0x2c51d20, __position=__position
+entry=..., __k="10TBranchRef") at /usr/include/c++/4.8.2/bits/stl_tree.h:1433
+#11 0x00007f25436a64a0 in std::_Rb_tree<std::string, std::pair<std::string const, TClass*>, std::_Select1st<std::pair<std::string const, TClass*> >, std::less<std::string>, std::allocator<std::pair<std::string const, TClass*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::string const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<std::string const, TClass*> >, std::piecewise_construct_t const&, std::tuple<std::string const&>&&, std::tuple<>&&) (this=this
+entry=0x2c51d20, __pos=__pos
+entry=...) at /usr/include/c++/4.8.2/bits/stl_tree.h:1673
+#12 0x00007f2543699a66 in operator[] (__k="10TBranchRef", this=0x2c51d20) at /usr/include/c++/4.8.2/bits/stl_map.h:465
+#13 Add (obj=<synthetic pointer>, key="10TBranchRef", this=0x2c51d20) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:355
+#14 TClass::AddClass (cl=cl
+entry=0x7f24cea8aa70) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:468
+#15 0x00007f254369ab57 in TClass::Init (this=this
+entry=0x7f24cea8aa70, name=name
+entry=0x7f2541ca4235 "TBranchRef", cversion=cversion
+entry=1, typeinfo=typeinfo
+entry=0x7f2541ed9a80 <typeinfo for TBranchRef>, isa=isa
+entry=0x2c7fa70, dfil=dfil
+entry=0x7f2541ca4228 "TBranchRef.h", ifil=ifil
+entry=0x7f2541ca7cd0 "/u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/tree/tree/src/TBranchRef.cxx", dl=dl
+entry=33, il=il
+entry=41, givenInfo=givenInfo
+entry=0x0, silent=silent
+entry=false) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:1393
+#16 0x00007f25436a38e0 in TClass::TClass (this=0x7f24cea8aa70, name=0x7f2541ca4235 "TBranchRef", cversion=<optimized out>, info=..., isa=0x2c7fa70, dfil=0x7f2541ca4228 "TBranchRef.h", ifil=0x7f2541ca7cd0 "/u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/tree/tree/src/TBranchRef.cxx", dl=33, il=41, silent=false) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:1290
+#17 0x00007f25436a3df4 in ROOT::CreateClass (cname=0x7f2541ca4235 "TBranchRef", id=<optimized out>, info=..., isa=0x2c7fa70, dfil=0x7f2541ca4228 "TBranchRef.h", ifil=0x7f2541ca7cd0 "/u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/tree/tree/src/TBranchRef.cxx", dl=33, il=41) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:5521
+#18 0x00007f25436b061e in ROOT::TGenericClassInfo::GetClass (this=0x7f2541ee8e00 <ROOT::GenerateInitInstanceLocal(TBranchRef const*)::instance>) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TGenericClassInfo.cxx:214
+#19 0x00007f2541c2ecf1 in TBranchRef::Dictionary () at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/build_dir/tree/tree/G__Tree.cxx:2396
+#20 0x00007f254369c272 in TClass::GetClass (name=0x7f24cead54b1 "TBranchRef", load=true, silent=<optimized out>) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:2940
+#21 0x00007f25430a88b8 in TStreamerInfo::Build (this=0x7f24ce3c2460) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/io/io/src/TStreamerInfo.cxx:524
+#22 0x00007f254304623d in TBufferFile::WriteClassBuffer (this=this
+entry=0x7f24e71780e0, cl=0x7f24f5954910, pointer=pointer
+entry=0x7f2511045590) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/io/io/src/TBufferFile.cxx:3934
+#23 0x00007f2541c9616c in TTree::Streamer (this=0x7f2511045590, b=...) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/tree/tree/src/TTree.cxx:8884
+#24 0x00007f2543095502 in TKey::TKey (this=0x7f24e6b72330, obj=0x7f2511045590, name=0x7f25110432f0 "kpkpxim__B4_M23_Tree", bufsize=1024, motherDir=<optimized out>) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/io/io/src/TKey.cxx:251
+#25 0x00007f25430655f5 in TFile::CreateKey (this=<optimized out>, mother=0x7f2511043400, obj=0x7f2511045590, name=0x7f25110432f0 "kpkpxim__B4_M23_Tree", bufsize=1024) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/io/io/src/TFile.cxx:1002
+#26 0x00007f254305e7f3 in TDirectoryFile::WriteTObject (this=0x7f2511043400, obj=0x7f2511045590, name=<optimized out>, option=<optimized out>, bufsize=0) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/io/io/src/TDirectoryFile.cxx:1869
+#27 0x00007f25436122f1 in TObject::Write (this=0x7f2511045590, name=0x0, option=<optimized out>, bufsize=0) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/base/src/TObject.cxx:816
+#28 0x00007f254305cc61 in TDirectoryFile::Write (this=this
+entry=0x7f2511043400, opt=opt
+entry=2, bufsize=bufsize
+entry=0) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/io/io/src/TDirectoryFile.cxx:1749
+#29 0x00007f254307655b in TFile::Write (this=0x7f2511043400, opt=2, bufsiz=0) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/io/io/src/TFile.cxx:2285
+#30 0x0000000000895875 in DTreeInterface::~DTreeInterface() ()
+#31 0x00000000006e66a9 in DEventWriterROOT::~DEventWriterROOT() ()
+#32 0x00000000006e68b9 in DEventWriterROOT::~DEventWriterROOT() ()
+#33 0x00000000006546c6 in DEventWriterROOT_factory::fini() ()
+#34 0x00000000010fc7d1 in jana::JEventLoop::~JEventLoop (this=0x7f250c0008c0, __in_chrg=<optimized out>) at src/JANA/JEventLoop.cc:123
+#35 0x00000000010fcd99 in jana::JEventLoop::~JEventLoop (this=0x7f250c0008c0, __in_chrg=<optimized out>) at src/JANA/JEventLoop.cc:152
+#36 0x00000000010d5d77 in ~__pthread_cleanup_class (this=<synthetic pointer>, __in_chrg=<optimized out>) at /usr/include/pthread.h:555
+#37 LaunchThread (arg=0x7ffc244524c0) at src/JANA/JApplication.cc:1391
+#38 0x00007f253db13ea5 in start_thread () from /lib64/libpthread.so.0
+#39 0x00007f253ce18b0d in clone () from /lib64/libc.so.6
+
+===========================================================
+
+
