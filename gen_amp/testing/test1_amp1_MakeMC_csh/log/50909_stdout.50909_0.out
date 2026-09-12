@@ -1,0 +1,609 @@
+Wed Jul 31 21:56:01 EDT 2024
+RUNNING IN A SINGULARITY CONTAINER: gluex_prod:v1
+XROOTD is available for use if needed...
+/work/halld/home/jahernan/HallD/MC/gen_amp/version_xml/version_recon-2018_08-ver02_29.xml
+pwd=/scratch/slurm/25470714
+what path?
+no_sqlite
+
+
+Detected c-shell
+JD70-104 17um 0/90 deg
+23
+Radiator thickness set...
+Polarization angle set...
+11.634012499999999
+Electron beam energy set...
+Coherent peak set...
+eBEAM energy set...
+Colimator size set...
+beam (on) current set...
+BGrate set...
+This job has been configured to run at:  JLAB : farm19107.jlab.org
+Job started:  Wed Jul 31 21:57:06 EDT 2024
+Simulating the Experiment:  GlueX
+ccdb sqlite path:  no_sqlite mysql://ccdb_user@hallddb.jlab.org/ccdb
+rcdb sqlite path:  no_sqlite mysql://rcdb@hallddb.jlab.org/rcdb
+Producing file number: 0
+Containing:  2701/10000 events
+Running location: ./
+Output location: /work/halld/home/jahernan/HallD/MC/gen_amp/testing/test1_amp1_MakeMC_csh/
+Project directory name: /work/halld/home/jahernan/HallD/MC/gen_amp/testing/test1_amp1_MakeMC_csh
+Environment file:  /work/halld/home/jahernan/HallD/MC/gen_amp/version_xml/version_recon-2018_08-ver02_29.xml
+Analysis Environment file:  /group/halld/www/halldweb/html/halld_versions/analysis-2018_08-ver02.xml
+Context: variation=mc
+Geometry URL: ccdb:///GEOMETRY/main_HDDS.xml
+Reconstruction calibtime: notime
+Run Number: 50909
+Electron beam current to use: .44989100000000000000 uA
+Electron beam energy to use: 11.634012499999999 GeV
+Radiator Thickness to use: 17e-6 m
+Collimator Diameter: 0.0050 m
+Photon Energy between 6.3 and 11.5 GeV
+Upper / Lower vertex indices are 1 and 23
+Polarization Angle: 90.0 degrees
+Coherent Peak position: 8.90000000000000000000
+----------------------------------------------
+Run generation step? 1  Will be cleaned? 1
+Flux Hist to use:  ccdb  :  unset
+Polarization to use:  0.4  :  unset
+Using gen_amp_V2  with config: /work/halld/home/jahernan/HallD/MC/gen_amp/testing/kpkpxim_2dhist.cfg
+Will run No postprocessing after generator with configuration: Default, event definitions: Default and decay definitions: Default
+----------------------------------------------
+Run geant step? 1  Will be cleaned? 1
+Using geant4
+Custom Gcontrol? 0
+Background to use: Random
+Random trigger background to use: recon-2018_08-ver02.2
+BGRATE will be set to: rcdb GHz (if applicable)
+Run mcsmear? 1  Will be cleaned? 1
+----------------------------------------------
+Run reconstruction? 1  Will be cleaned? 0
+With additional plugins: file:/work/halld/home/jahernan/HallD/MC/gen_amp/hd_root_files/hd_root_xim_2018.conf
+With additional analysis launch plugins: None
+==============================================
+
+
+=======SOFTWARE USED=======
+MCwrapper version v2.9.0
+MCwrapper location /work/halld/home/jahernan/HallD/MC/gluex_MCwrapper
+Streaming via xrootd? 1 Event Count: 193542
+BC /usr/bin/bc
+python /usr/bin/python
+/work/halld/home/jahernan/HallD/MC/halld_sim/Linux_CentOS7-x86_64-gcc4.8.5-cntr/bin/gen_amp_V2
+/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/hdgeant4/hdgeant4-2.39.0^rec180829/bin/Linux-g++/hdgeant4
+/work/halld/home/jahernan/HallD/MC/halld_sim/Linux_CentOS7-x86_64-gcc4.8.5-cntr/bin/mcsmear
+/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/halld_recon/halld_recon-recon-2018_08-ver02.9/Linux_CentOS7-x86_64-gcc4.8.5-cntr/bin/hd_root
+
+
+Finding the right file to fold in during MCsmear step
+RECO PREFIX:   file
+input file found
+gen_amp_V2
+configuring gen_amp_V2
+config file name: kpkpxim_2dhist.cfg
+RUNNING GEN_AMP_V2
+-t 1.45 1 -mask 1 1 0
+gen_amp_V2 -ac gen_amp_V2_050909_000.conf -hd gen_amp_V2_050909_000.hddm -o gen_amp_V2_050909_000.root -uv 1 -lv 23 -n 2701 -r 50909 -a 6.3 -b 11.5 -p 8.90000000000000000000 -m 11.634012499999999 -t 1.45 1 -mask 1 1 0
+   =================================================================
+   |        ^                                                      |
+   |       / \             Version:  unknown                       |
+   |      /---\                                                    |
+   |     /     \           GDouble:  8 bytes                       |
+   |    /       \ MP           MPI:  NO                            |
+   |     -------               GPU:  NO                            |
+   |        |                                                      |
+   |        |              doi.org/10.5281/zenodo.5039377          |
+   |        | OOLS                                                 |
+   =================================================================
+TRandom3 Seed : 1157792260
+
+[ AmplitudeManager ]:
+
+	Creating AmplitudeManager for the reaction:  KpKpXim
+		 particle index assignment:  Beam -> 0
+		 particle index assignment:  K+ -> 1
+		 particle index assignment:  K+%2 -> 2
+		 particle index assignment:  Xi- -> 3
+Opening ROOT file /work/halld/home/jahernan/HallD/MC/gen_amp/testing/gen_amp_hist2d.root
+Model provided in histogram named ResCosThetaVsMass_Phase1
+Histogram type for generator CosThetaVsMass
+Summing particle indices 23 for invariant mass
+2
+3
+WARNING: Couldn't find beam configuration file -- write local version
+
+BeamProperties: Parsing config file local_beam.conf
+BeamProperties WARNING:  generateCombrems parameter Emittance missing: using default = 2.5e-09
+BeamProperties WARNING:  generateCombrems parameter RadiatorThickness missing: using default = 5e-05
+BeamProperties WARNING:  generateCombrems parameter CollimatorDiameter missing: using default = 0.005
+BeamProperties WARNING:  generateCombrems parameter CollimatorDistance missing: using default = 76
+
+Initialization for coherent bremsstralung calculation
+ electron beam energy: 11.634 GeV
+ primary coherent edge: 8.9 GeV
+Generating four-vectors...
+Processing events...
+360 events were processed.
+Generating four-vectors...
+Processing events...
+666 events were processed.
+Generating four-vectors...
+Processing events...
+1004 events were processed.
+Generating four-vectors...
+Processing events...
+1361 events were processed.
+Generating four-vectors...
+Processing events...
+1663 events were processed.
+Generating four-vectors...
+Processing events...
+1979 events were processed.
+Generating four-vectors...
+Processing events...
+2308 events were processed.
+Generating four-vectors...
+Processing events...
+2593 events were processed.
+Generating four-vectors...
+Processing events...
+2701 events were processed.
+RUNNING GEANT4
+
+*************************************************************
+ Geant4 version Name: geant4-10-02-patch-02 [MT]   (17-June-2016)
+  << in Multi-threaded mode >> 
+                      Copyright : Geant4 Collaboration
+                      Reference : NIM A 506 (2003), 250-303
+                            WWW : http://cern.ch/geant4
+*************************************************************
+
+JANA >>Created JCalibration object of type: JCalibrationCCDB
+JANA >>Generated via: JCalibration using CCDB for MySQL and SQLite databases
+JANA >>Run:50909
+JANA >>URL: mysql://ccdb_user@hallddb-farm.jlab.org/ccdb
+JANA >>context: variation=mc
+JANA >>comment: Variation for simulations with data conditions
+JANA >>Reading Magnetic field map from Magnets/Solenoid/solenoid_1350A_poisson_20160222 ...
+ Nx=221 Ny=1 Nz=701 )  at 0x366fb50
+Reading fine-mesh B-field data from /group/halld/www/halldweb/html/resources/Magnets/Solenoid/finemeshes/solenoid_1350A_poisson_20160222
+ rmin: 0 rmax: 88.5 dr: 0.1 zmin: 0 zmax: 600 dz: 0.1
+ Number of points in z = 6000
+ Number of points in r = 885
+In G4HelixMixedStepper: Choosing Stepper for small steps. Choice is G4ClassicalRK4
+JANA >>154921 entries found (Creating DGeometry:
+JANA >>  Run requested:50909  found:50909
+JANA >>  Run validity range: 50909-50909
+JANA >>  URL="ccdb:///GEOMETRY/main_HDDS.xml"  context="default"
+JANA >>  Type="JGeometryXML"
+JANA >>Found 25 material maps in calib. DB
+JANA >>Read in 25 material maps for run 50909 containing 76153 grid points total
+JANA >>
+JANA >>Reading Pair Spectrometer Magnetic field map from Magnets/PairSpectrometer/PS_1.8T_20150513_test ...
+ Nx=40 Ny=1 Nz=121 )  at 0x69e0640
+Initializing the Geant4 kernel...
+Root geometry volume SITE::1 configured as World
+In G4HelixMixedStepper: Choosing Stepper for small steps. Choice is G4ClassicalRK4
+STC: ALL parameters loaded from ccdb
+CDC: ALL parameters loaded from ccdb
+FDC: ALL parameters loaded from ccdb
+BCAL: ALL parameters loaded from ccdb
+FTOF: ALL parameters loaded from ccdb
+FCAL: ALL parameters loaded from ccdb
+Additional geometry layer configured as ParallelWorld1
+ G4PhysicsListHelper::AddTransportation()--- G4CoupledTransportation is used 
+ New QGSP_FTFP_BERT physics list, replaces LEP with FTF/P for p/n/pi (/K?)  Thresholds: 
+    1) between BERT  and FTF/P over the interval 6 to 8 GeV. 
+    2) between FTF/P and QGS/P over the interval 12 to 25 GeV. 
+  -- quasiElastic was asked to be 1
+     Changed to 1 for QGS  and to 0 (must be false) for FTF
+GlueXBeamConversionProcess::InitialiseProcess:
+   Setting up cross section tables, please wait... finished.
+G4WT3 > 
+G4WT3 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT3 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT3 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT3 > 
+G4WT0 > 
+G4WT0 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT0 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT0 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT0 > 
+G4WT1 > 
+G4WT1 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT1 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT1 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT1 > 
+G4WT2 > 
+G4WT2 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT2 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT2 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT2 > 
+G4WT3 > Opened input file: gen_amp_V2_050909_000.hddm
+G4WT3 > In G4HelixMixedStepper: Choosing Stepper for small steps. Choice is G4ClassicalRK4
+G4WT3 >  G4PhysicsListHelper::AddTransportation()--- G4CoupledTransportation is used 
+G4WT3 >  New QGSP_FTFP_BERT physics list, replaces LEP with FTF/P for p/n/pi (/K?)  Thresholds: 
+G4WT3 >     1) between BERT  and FTF/P over the interval 6 to 8 GeV. 
+G4WT3 >     2) between FTF/P and QGS/P over the interval 12 to 25 GeV. 
+G4WT3 >   -- quasiElastic was asked to be 1
+G4WT3 >      Changed to 1 for QGS  and to 0 (must be false) for FTF
+G4WT0 > In G4HelixMixedStepper: Choosing Stepper for small steps. Choice is G4ClassicalRK4
+G4WT0 >  G4PhysicsListHelper::AddTransportation()--- G4CoupledTransportation is used 
+G4WT0 >  New QGSP_FTFP_BERT physics list, replaces LEP with FTF/P for p/n/pi (/K?)  Thresholds: 
+G4WT0 >     1) between BERT  and FTF/P over the interval 6 to 8 GeV. 
+G4WT0 >     2) between FTF/P and QGS/P over the interval 12 to 25 GeV. 
+G4WT0 >   -- quasiElastic was asked to be 1
+G4WT0 >      Changed to 1 for QGS  and to 0 (must be false) for FTF
+G4WT1 > In G4HelixMixedStepper: Choosing Stepper for small steps. Choice is G4ClassicalRK4
+G4WT1 >  G4PhysicsListHelper::AddTransportation()--- G4CoupledTransportation is used 
+G4WT1 >  New QGSP_FTFP_BERT physics list, replaces LEP with FTF/P for p/n/pi (/K?)  Thresholds: 
+G4WT1 >     1) between BERT  and FTF/P over the interval 6 to 8 GeV. 
+G4WT1 >     2) between FTF/P and QGS/P over the interval 12 to 25 GeV. 
+G4WT1 >   -- quasiElastic was asked to be 1
+G4WT1 >      Changed to 1 for QGS  and to 0 (must be false) for FTF
+G4WT2 > In G4HelixMixedStepper: Choosing Stepper for small steps. Choice is G4ClassicalRK4
+G4WT2 >  G4PhysicsListHelper::AddTransportation()--- G4CoupledTransportation is used 
+G4WT2 >  New QGSP_FTFP_BERT physics list, replaces LEP with FTF/P for p/n/pi (/K?)  Thresholds: 
+G4WT2 >     1) between BERT  and FTF/P over the interval 6 to 8 GeV. 
+G4WT2 >     2) between FTF/P and QGS/P over the interval 12 to 25 GeV. 
+G4WT2 >   -- quasiElastic was asked to be 1
+G4WT2 >      Changed to 1 for QGS  and to 0 (must be false) for FTF
+G4DecayTable:  lambda
+0:  BR:  1  [Phase Space]   :   proton pi-
+1:  BR:  0  [Phase Space]   :   neutron pi0
+
+G4WT3 > Configured beam vertex parameters: (units of cm)
+G4WT1 > Configured beam vertex parameters: (units of cm)
+G4WT1 >    center x=0.1649   y=-0.0439   z=65
+G4WT2 > Configured beam vertex parameters: (units of cm)
+G4WT2 >    center x=0.1649   y=-0.0439   z=65
+G4WT2 >    sigma_x=0.252705   sigma_y=0.257099   sigma_xy=0
+G4WT2 >    dxdz=-0.0005682   dydz=0.0003165   dz=29.5
+G4WT3 >    center x=0.1649   y=-0.0439   z=65
+G4WT3 >    sigma_x=0.252705   sigma_y=0.257099   sigma_xy=0
+G4WT3 >    dxdz=-0.0005682   dydz=0.0003165   dz=29.5
+G4WT2 > JCalibration context: variation=mc
+G4WT0 > Configured beam vertex parameters: (units of cm)
+G4WT3 > JCalibration context: variation=mc
+G4WT0 >    center x=0.1649   y=-0.0439   z=65
+G4WT1 >    sigma_x=0.252705   sigma_y=0.257099   sigma_xy=0
+G4WT1 >    dxdz=-0.0005682   dydz=0.0003165   dz=29.5
+G4WT0 >    sigma_x=0.252705   sigma_y=0.257099   sigma_xy=0
+G4WT0 >    dxdz=-0.0005682   dydz=0.0003165   dz=29.5
+G4WT1 > JCalibration context: variation=mc
+G4WT0 > JCalibration context: variation=mc
+G4WT2 > JCalibration context: variation=mc
+G4WT3 > JCalibration context: variation=mc
+G4WT1 > JCalibration context: variation=mc
+G4WT3 > Info: RF reference plane set to 65 cm.
+G4WT2 > Info: RF reference plane set to 65 cm.
+G4WT0 > JCalibration context: variation=mc
+G4WT1 > Info: RF reference plane set to 65 cm.
+G4WT0 > Info: RF reference plane set to 65 cm.
+G4WT3 > TAGGER: all parameters loaded from ccdb
+G4WT1 > TAGGER: all parameters loaded from ccdb
+G4WT0 > TAGGER: all parameters loaded from ccdb
+G4WT2 > TAGGER: all parameters loaded from ccdb
+G4WT1 > 2 events simulated
+G4WT3 > 1 events simulated
+G4WT2 > 3 events simulated
+G4WT0 > 4 events simulated
+G4WT0 > 8 events simulated
+G4WT1 > 5 events simulated
+G4WT3 > 6 events simulated
+G4WT1 > 10 events simulated
+G4WT2 > 7 events simulated
+G4WT0 > 9 events simulated
+G4WT1 > 20 events simulated
+G4WT0 > 30 events simulated
+G4WT3 > 40 events simulated
+G4WT0 > 50 events simulated
+G4WT1 > 60 events simulated
+G4WT3 > 70 events simulated
+G4WT2 > 80 events simulated
+G4WT2 > 90 events simulated
+G4WT2 > 100 events simulated
+G4WT1 > 200 events simulated
+G4WT1 > 300 events simulated
+G4WT0 > 400 events simulated
+G4WT0 > 500 events simulated
+G4WT0 > 600 events simulated
+G4WT3 > 700 events simulated
+G4WT2 > 800 events simulated
+G4WT2 > 900 events simulated
+G4WT3 > 1000 events simulated
+G4WT2 > 2000 events simulated
+2701 events generated.
+Processing usage report:     real time (s)   system time (s)     user time (s)
+      per event average:          0.071833          0.001399          0.279434
+          total for run:        253.560000          4.950000        859.720000
+RUNNING MCSMEAR
+0
+10000
+193542
+mcsmear  -PTHREAD_TIMEOUT_FIRST_EVENT=6400 -PTHREAD_TIMEOUT=6400 -ogen_amp_V2_050909_000\_geant4\_smeared.hddm gen_amp_V2_050909_000\_geant4.hddm root://sci-xrootd.jlab.org//osgpool/halld//random_triggers/recon-2018_08-ver02.2/run050909\_random.hddm:1+0
+JANA >> Enabling z compression of output HDDM file stream (default)
+JANA >> Enabling CRC data integrity check in output HDDM file stream
+JANA >>Opening source "gen_amp_V2_050909_000_geant4.hddm" of type: HDDM
+JANA >>Launching threads .
+JANA >>Installing special signal handler for mcsmear...
+JANA >>Created JCalibration object of type: JCalibrationCCDB
+JANA >>Generated via: JCalibration using CCDB for MySQL and SQLite databases
+JANA >>Run:50909
+JANA >>URL: mysql://ccdb_user@hallddb-farm.jlab.org/ccdb
+JANA >>context: variation=mc
+JANA >>comment: Variation for simulations with data conditions
+JANA >>checking context = variation=mc
+get BCAL/bcal_smear_parms_v2 parameters from CCDB...
+Get BCAL/digi_scales parameters from CCDB...
+Get BCAL/base_time_offset parameters from CCDB...
+Get BCAL/channel_mc_efficiency tables from CCDB...
+Get BCAL/bad_channels tables from CCDB...
+Get BCAL/ADC_saturation parameters from CCDB...
+Get BCAL/SiPM_saturation parameters from CCDB...
+  1.0 events processed  (11.0 events read)  2.0Hz  (avg.: 0.0Hz)     JANA >>Creating DGeometry:
+JANA >>  Run requested:50909  found:50909
+JANA >>  Run validity range: 50909-50909
+JANA >>  URL="ccdb:///GEOMETRY/main_HDDS.xml"  context="default"
+JANA >>  Type="JGeometryXML"
+JANA >>Found 25 material maps in calib. DB
+  1.0 events processed  (11.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>Read in 25 material maps for run 50909 containing 76153 grid points total
+Get PHOTON_BEAM/endpoint_energy from CCDB ...
+Get FCAL/fcal_mc_timing_parms parameters from CCDB...
+Get FCAL/fcal_parms parameters from CCDB...
+get FCAL/gains from calibDB
+  1.0 events processed  (11.0 events read)  0.0Hz  (avg.: 0.0Hz)     get FCAL/pedestals from calibDB
+  1.0 events processed  (11.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (11.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (11.0 events read)  0.0Hz  (avg.: 0.0Hz)     get FCAL/MC/pedestal_rms from calibDB
+get FCAL/MC/integral_peak_ratio from calibDB
+get FCAL/MC/threshold from calibDB
+get FCAL/MC/threhsold_scaling from calibDB
+get FCAL/MC/mc_escale from calibDB
+get FCAL/MC/energy_width_floor from calibDB
+get FCAL/digi_scales parameters from calibDB
+get FCAL/mc_timing_smear parameters from calibDB
+get FCAL/fcal_lightguide_scale_factor parameters from calibDB
+JANA >>get CDC/cdc_parms parameters from CCDB...
+JANA >>get CDC/diffusion_parms parameters from CCDB...
+JANA >>get CDC/digi_scales parameters from CCDB...
+  1.0 events processed  (11.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (11.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>get CDC/gain_doca_correction parameters from CCDB...
+  1.0 events processed  (11.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>get CDC/gain_doca_corr_ext parameters from CCDB...
+Get FDC/fdc_parms parameters from CCDB...
+Get TOF/tof_parms parameters from CCDB...
+get TOF/paddle_resolutions from calibDB
+Number of TOF bars per plane = 44
+Get START_COUNTER/start_parms parameters from CCDB...
+get START_COUNTER/paddle_mc_efficiency from calibDB
+Get CCAL/mc_energy parameters from CCDB...
+get CCAL/mc_time parameters from calibDB
+JANA >>Finished initializing detector smearing ...
+  1.0 events processed  (11.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >> --- Configuration Parameters --
+JANA >>[1m THREAD_TIMEOUT             = 6400[0m
+JANA >>[1m THREAD_TIMEOUT_FIRST_EVENT = 6400[0m
+JANA >> -------------------------------
+  50.0 events processed  (60.0 events read)  98.0Hz  (avg.: 98.0Hz)       101.0 events processed  (111.0 events read)  102.0Hz  (avg.: 100.0Hz)       152.0 events processed  (162.0 events read)  102.0Hz  (avg.: 100.7Hz)       208.0 events processed  (218.0 events read)  112.0Hz  (avg.: 103.5Hz)       258.0 events processed  (268.0 events read)  100.0Hz  (avg.: 102.8Hz)       310.0 events processed  (320.0 events read)  104.0Hz  (avg.: 103.0Hz)       362.0 events processed  (372.0 events read)  104.0Hz  (avg.: 103.1Hz)       419.0 events processed  (428.0 events read)  114.0Hz  (avg.: 104.5Hz)       469.0 events processed  (479.0 events read)  100.0Hz  (avg.: 104.0Hz)       521.0 events processed  (531.0 events read)  104.0Hz  (avg.: 104.0Hz)       567.0 events processed  (577.0 events read)  92.0Hz  (avg.: 102.9Hz)       615.0 events processed  (625.0 events read)  96.0Hz  (avg.: 102.3Hz)       661.0 events processed  (671.0 events read)  92.0Hz  (avg.: 101.5Hz)       714.0 events processed  (724.0 events read)  106.0Hz  (avg.: 101.9Hz)       737.0 events processed  (747.0 events read)  46.0Hz  (avg.: 98.1Hz)       737.0 events processed  (747.0 events read)  0.0Hz  (avg.: 92.0Hz)       737.0 events processed  (747.0 events read)  0.0Hz  (avg.: 86.6Hz)       771.0 events processed  (781.0 events read)  68.0Hz  (avg.: 85.6Hz)       826.0 events processed  (835.0 events read)  110.0Hz  (avg.: 86.8Hz)       876.0 events processed  (886.0 events read)  100.0Hz  (avg.: 87.5Hz)       923.0 events processed  (933.0 events read)  94.0Hz  (avg.: 87.8Hz)       971.0 events processed  (981.0 events read)  96.0Hz  (avg.: 88.2Hz)       1020.0 events processed  (1030.0 events read)  98.0Hz  (avg.: 88.6Hz)       1066.0 events processed  (1076.0 events read)  92.0Hz  (avg.: 88.8Hz)       1113.0 events processed  (1123.0 events read)  94.0Hz  (avg.: 89.0Hz)       1163.0 events processed  (1173.0 events read)  100.0Hz  (avg.: 89.4Hz)       1210.0 events processed  (1220.0 events read)  94.0Hz  (avg.: 89.6Hz)       1255.0 events processed  (1265.0 events read)  90.0Hz  (avg.: 89.6Hz)       1305.0 events processed  (1315.0 events read)  100.0Hz  (avg.: 89.9Hz)       1354.0 events processed  (1364.0 events read)  98.0Hz  (avg.: 90.2Hz)       1399.0 events processed  (1409.0 events read)  90.0Hz  (avg.: 90.2Hz)       1450.0 events processed  (1460.0 events read)  102.0Hz  (avg.: 90.6Hz)       1498.0 events processed  (1.5k events read)  96.0Hz  (avg.: 90.7Hz)       1.5k events processed  (1.6k events read)  98.0Hz  (avg.: 90.9Hz)       1.6k events processed  (1.6k events read)  98.0Hz  (avg.: 91.1Hz)       1.6k events processed  (1.7k events read)  96.0Hz  (avg.: 91.3Hz)       1.7k events processed  (1.7k events read)  90.0Hz  (avg.: 91.2Hz)       1.7k events processed  (1.8k events read)  102.0Hz  (avg.: 91.5Hz)       1.8k events processed  (1.8k events read)  92.0Hz  (avg.: 91.5Hz)       1.8k events processed  (1.8k events read)  96.0Hz  (avg.: 91.7Hz)       1.9k events processed  (1.9k events read)  96.0Hz  (avg.: 91.8Hz)       1.9k events processed  (1.9k events read)  100.0Hz  (avg.: 92.0Hz)       2.0k events processed  (2.0k events read)  94.0Hz  (avg.: 92.0Hz)       2.0k events processed  (2.0k events read)  108.0Hz  (avg.: 92.4Hz)       2.1k events processed  (2.1k events read)  96.0Hz  (avg.: 92.4Hz)       2.1k events processed  (2.1k events read)  98.0Hz  (avg.: 92.6Hz)       2.2k events processed  (2.2k events read)  100.0Hz  (avg.: 92.7Hz)       2.2k events processed  (2.2k events read)  98.0Hz  (avg.: 92.8Hz)       2.3k events processed  (2.3k events read)  92.0Hz  (avg.: 92.8Hz)       2.3k events processed  (2.3k events read)  106.0Hz  (avg.: 93.1Hz)       2.4k events processed  (2.4k events read)  92.0Hz  (avg.: 93.1Hz)       2.4k events processed  (2.4k events read)  106.0Hz  (avg.: 93.3Hz)       2.5k events processed  (2.5k events read)  106.0Hz  (avg.: 93.5Hz)       2.5k events processed  (2.5k events read)  102.0Hz  (avg.: 93.7Hz)       2.6k events processed  (2.6k events read)  98.0Hz  (avg.: 93.8Hz)       2.6k events processed  (2.6k events read)  106.0Hz  (avg.: 94.0Hz)       2.7k events processed  (2.7k events read)  96.0Hz  (avg.: 94.0Hz)     JANA >>
+JANA >>No more event sources
+JANA >>Thread 0x7fa52ffff700 completed gracefully: Wed Jul 31 22:03:07 2024
+JANA >>Merging thread 0 (0x7fa52ffff700) ...
+
+Closed HDDM file
+ 2701 event written to gen_amp_V2_050909_000_geant4_smeared.hddm
+JANA >>Merging event reader thread ...
+JANA >> 2701 events processed  (2701 events read) Average rate: 93.1Hz
+RUNNING RECONSTRUCTION
+using config file: /work/halld/home/jahernan/HallD/MC/gen_amp/hd_root_files/hd_root_xim_2018.conf
+hd_root gen_amp_V2_050909_000_geant4_smeared.hddm --config=jana_config.cfg -PNTHREADS=4 -PTHREAD_TIMEOUT=500
+JANA >>Reading configuration from "jana_config.cfg" ...
+JANA >>OUTPUT_FILENAME: hd_root.root
+JANA >>Initializing plugin "/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/halld_recon/halld_recon-recon-2018_08-ver02.9/Linux_CentOS7-x86_64-gcc4.8.5-cntr/plugins/monitoring_hists.so" ...
+JANA >>Initializing plugin "/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/halld_recon/halld_recon-recon-2018_08-ver02.9/Linux_CentOS7-x86_64-gcc4.8.5-cntr/plugins/ReactionFilter.so" ...
+JANA >>Initializing plugin "/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/halld_recon/halld_recon-recon-2018_08-ver02.9/Linux_CentOS7-x86_64-gcc4.8.5-cntr/plugins/danarest.so" ...
+JANA >>Initializing plugin "/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/halld_recon/halld_recon-recon-2018_08-ver02.9/Linux_CentOS7-x86_64-gcc4.8.5-cntr/plugins/mcthrown_tree.so" ...
+JANA >>Initializing plugin "/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/halld_recon/halld_recon-recon-2018_08-ver02.9/Linux_CentOS7-x86_64-gcc4.8.5-cntr/plugins/TrackingPulls.so" ...
+Opened ROOT file "hd_root.root" ...
+JANA >>Opening source "gen_amp_V2_050909_000_geant4_smeared.hddm" of type: HDDM
+JANA >>Launching threads ....
+JANA >> THREAD_TIMEOUT_FIRST_EVENT is set smaller than THREAD_TIMEOUT
+JANA >> (30 < 500). THREAD_TIMEOUT_FIRST_EVENT will be set to 500
+
+
+JANA >>Created JCalibration object of type: JCalibrationCCDB
+JANA >>Generated via: JCalibration using CCDB for MySQL and SQLite databases
+JANA >>Run:50909
+JANA >>URL: mysql://ccdb_user@hallddb-farm.jlab.org/ccdb
+JANA >>context: variation=mc
+JANA >>comment: Variation for simulations with data conditions
+JANA >>Creating DGeometry:
+JANA >>  Run requested:50909  found:50909
+JANA >>  Run validity range: 50909-50909
+JANA >>  URL="ccdb:///GEOMETRY/main_HDDS.xml"  context="default"
+JANA >>  Type="JGeometryXML"
+JANA >>Found 25 material maps in calib. DB
+  4.0 events processed  (14.0 events read)  8.0Hz  (avg.: 0.0Hz)     JANA >>Read in 25 material maps for run 50909 containing 76153 grid points total
+Created TGeoManager :0x7f7acd231cb0
+JANA >>Reading Magnetic field map from Magnets/Solenoid/solenoid_1350A_poisson_20160222 ...
+  4.0 events processed  (14.0 events read)  0.0Hz  (avg.: 0.0Hz)       4.0 events processed  (14.0 events read)  0.0Hz  (avg.: 0.0Hz)       4.0 events processed  (14.0 events read)  0.0Hz  (avg.: 0.0Hz)      Nx=221 Ny=1 Nz=701 )  at 0x7f7ace39b8c0
+  4.0 events processed  (14.0 events read)  0.0Hz  (avg.: 0.0Hz)     Reading fine-mesh B-field data from /group/halld/www/halldweb/html/resources/Magnets/Solenoid/finemeshes/solenoid_1350A_poisson_20160222
+ rmin: 0 rmax: 88.5 dr: 0.1 zmin: 0 zmax: 600 dz: 0.1
+ Number of points in z = 6000
+ Number of points in r = 885
+JANA >>154921 entries found (Created Magnetic field map of type DMagneticFieldMapFineMesh
+  4.0 events processed  (14.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >> Beam spot: x=0.1649 y=-0.0439 z=65 dx/dz=-0.0005682 dy/dz=0.0003165
+JANA >>vertex constraint: <none>
+JANA >>Creating DTranslationTable for run 50909
+JANA >>Reading translation table from calib DB: Translation/DAQ2detector ...
+  4.0 events processed  (14.0 events read)  0.0Hz  (avg.: 0.0Hz)       4.0 events processed  (14.0 events read)  0.0Hz  (avg.: 0.0Hz)       4.0 events processed  (14.0 events read)  0.0Hz  (avg.: 0.0Hz)       4.0 events processed  (14.0 events read)  0.0Hz  (avg.: 0.0Hz)       4.0 events processed  (14.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>23308 channels defined in translation table
+Exception: FCAL channel is not in the translation table   Crate = 14  Slot = 3 Channel = 15
+Exception: FCAL channel is not in the translation table   Crate = 14  Slot = 3 Channel = 15
+Exception: FCAL channel is not in the translation table   Crate = 14  Slot = 3 Channel = 15
+Exception: FCAL channel is not in the translation table   Crate = 14  Slot = 3 Channel = 15
+
+
+ ------------  Trigger Settings --------------- 
+
+
+----------- FCAL ----------- 
+
+FCAL_CELL_THR  =        165
+FCAL_NSA       =         10
+FCAL_NSB       =          3
+FCAL_WINDOW    =         10
+
+----------- BCAL ----------- 
+
+BCAL_CELL_THR  =        120
+BCAL_NSA       =         19
+BCAL_NSB       =          3
+BCAL_WINDOW    =         20
+
+
+TYPE     FCAL_E   BCAL_E   EN_THR   NHIT     LANE     FCAL_EMIN    FCAL_EMAX   BCAL_EMIN   BCAL_EMAX   PATTERN   
+BFCAL      25        1      45000     0        0         200         65535         0         65535      0x0
+BFCAL       0        1      54000     0        2           0             0         0             0      0x0
+PS          0        0          0     0        3           0             0         0             0      0x0
+
+
+JANA >>In DL1MCTrigger_factory, loading constants...
+
+
+ ------------  Trigger Settings --------------- 
+
+
+----------- FCAL ----------- 
+
+FCAL_CELL_THR  =        165
+FCAL_NSA       =         10
+FCAL_NSB       =          3
+FCAL_WINDOW    =         10
+
+----------- BCAL ----------- 
+
+BCAL_CELL_THR  =        120
+BCAL_NSA       =         19
+BCAL_NSB       =          3
+BCAL_WINDOW    =         20
+
+
+TYPE     FCAL_E   BCAL_E   EN_THR   NHIT     LANE     FCAL_EMIN    FCAL_EMAX   BCAL_EMIN   BCAL_EMAX   PATTERN   
+BFCAL      25        1      45000     0        0         200         65535         0         65535      0x0
+BFCAL       0        1      54000     0        2           0             0         0             0      0x0
+PS          0        0          0     0        3           0             0         0             0      0x0
+
+
+JANA >>In DBCALHit_factory, loading constants...
+
+
+ ------------  Trigger Settings --------------- 
+
+
+----------- FCAL ----------- 
+
+FCAL_CELL_THR  =        165
+FCAL_NSA       =         10
+FCAL_NSB       =          3
+FCAL_WINDOW    =         10
+
+----------- BCAL ----------- 
+
+BCAL_CELL_THR  =        120
+BCAL_NSA       =         19
+BCAL_NSB       =          3
+BCAL_WINDOW    =         20
+
+
+TYPE     FCAL_E   BCAL_E   EN_THR   NHIT     LANE     FCAL_EMIN    FCAL_EMAX   BCAL_EMIN   BCAL_EMAX   PATTERN   
+BFCAL      25        1      45000     0        0         200         65535         0         65535      0x0
+BFCAL       0        1      54000     0        2           0             0         0             0      0x0
+PS          0        0          0     0        3           0             0         0             0      0x0
+
+
+
+
+ ------------  Trigger Settings --------------- 
+
+
+----------- FCAL ----------- 
+
+FCAL_CELL_THR  =        165
+FCAL_NSA       =         10
+FCAL_NSB       =          3
+FCAL_WINDOW    =         10
+
+----------- BCAL ----------- 
+
+BCAL_CELL_THR  =        120
+BCAL_NSA       =         19
+BCAL_NSB       =          3
+BCAL_WINDOW    =         20
+
+
+TYPE     FCAL_E   BCAL_E   EN_THR   NHIT     LANE     FCAL_EMIN    FCAL_EMAX   BCAL_EMIN   BCAL_EMAX   PATTERN   
+BFCAL      25        1      45000     0        0         200         65535         0         65535      0x0
+BFCAL       0        1      54000     0        2           0             0         0             0      0x0
+PS          0        0          0     0        3           0             0         0             0      0x0
+
+
+  4.0 events processed  (14.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >> Beam spot: x=0.1649 y=-0.0439 z=65 dx/dz=-0.0005682 dy/dz=0.0003165
+JANA >> Beam spot: x=0.1649 y=-0.0439 z=65 dx/dz=-0.0005682 dy/dz=0.0003165
+JANA >> Beam spot: x=0.1649 y=-0.0439 z=65 dx/dz=-0.0005682 dy/dz=0.0003165
+JANA >>in DBCALPoint_factory, loading constants ...
+JANA >>DBCALUnifiedHit_factory: Using ADC times only.
+  4.0 events processed  (14.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>In DBCALTDCHit_factory, loading constants...
+  4.0 events processed  (14.0 events read)  0.0Hz  (avg.: 0.0Hz)       4.0 events processed  (14.0 events read)  0.0Hz  (avg.: 0.0Hz)       4.0 events processed  (14.0 events read)  0.0Hz  (avg.: 0.0Hz)     ReactionFilter: Reaction: kpkpxim__B4_M23
+Photon_Proton__K+_K+_Xi-
+Xi-__Pi-_Lambda
+Lambda__Pi-_Proton
+ReactionFilter: Reaction: kpkpxim__B4_M23
+Photon_Proton__K+_K+_Xi-
+Xi-__Pi-_Lambda
+Lambda__Pi-_Proton
+ReactionFilter: Reaction: kpkpxim__B4_M23
+Photon_Proton__K+_K+_Xi-
+Xi-__Pi-_Lambda
+Lambda__Pi-_Proton
+ReactionFilter: Reaction: kpkpxim__B4_M23
+Photon_Proton__K+_K+_Xi-
+Xi-__Pi-_Lambda
+Lambda__Pi-_Proton
+  4.0 events processed  (14.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >> Enabling bz2 compression of output HDDM file stream
+JANA >> Enabling CRC data integrity check in output HDDM file stream
+JANA >>
+JANA >> --- Configuration Parameters --
+JANA >>[1m COMBO:MAX_NEUTRALS         = 15                                                                  [0m
+JANA >>[1m JANA:RESOURCE_DEFAULT_PATH =                                                                     [0m
+JANA >>[1m NTHREADS                   = 4                                                                   [0m
+JANA >>[1m PLUGINS                    = monitoring_hists,ReactionFilter,danarest,mcthrown_tree,TrackingPulls[0m
+JANA >>[1m Reaction1                  = 1_14__11_11_23                                                      [0m
+JANA >>[1m Reaction1:Flags            = B4_M23                                                              [0m
+JANA >>[1m THREAD_TIMEOUT             = 500                                                                 [0m
+JANA >> -------------------------------
+  9.0 events processed  (19.0 events read)  10.0Hz  (avg.: 10.0Hz)       12.0 events processed  (22.0 events read)  6.0Hz  (avg.: 8.0Hz)     JANA >> Correct Beam Photon Energy (TAGH) = 11.614 (GeV)
+JANA >> Correct Beam Photon Energy (TAGM) = 11.614 (GeV)
+  15.0 events processed  (25.0 events read)  6.0Hz  (avg.: 7.3Hz)       18.0 events processed  (28.0 events read)  6.0Hz  (avg.: 7.0Hz)       22.0 events processed  (32.0 events read)  8.0Hz  (avg.: 7.2Hz)       27.0 events processed  (37.0 events read)  10.0Hz  (avg.: 7.7Hz)       31.0 events processed  (41.0 events read)  8.0Hz  (avg.: 7.7Hz)       33.0 events processed  (43.0 events read)  4.0Hz  (avg.: 7.2Hz)       37.0 events processed  (47.0 events read)  8.0Hz  (avg.: 7.3Hz)       40.0 events processed  (50.0 events read)  6.0Hz  (avg.: 7.2Hz)       43.0 events processed  (53.0 events read)  6.0Hz  (avg.: 7.1Hz)       48.0 events processed  (58.0 events read)  10.0Hz  (avg.: 7.3Hz)       51.0 events processed  (61.0 events read)  6.0Hz  (avg.: 7.2Hz)       54.0 events processed  (63.0 events read)  6.0Hz  (avg.: 7.1Hz)       57.0 events processed  (67.0 events read)  6.0Hz  (avg.: 7.1Hz)       60.0 events processed  (70.0 events read)  6.0Hz  (avg.: 7.0Hz)       64.0 events processed  (74.0 events read)  8.0Hz  (avg.: 7.1Hz)       68.0 events processed  (78.0 events read)  8.0Hz  (avg.: 7.1Hz)       75.0 events processed  (85.0 events read)  14.0Hz  (avg.: 7.5Hz)       78.0 events processed  (88.0 events read)  6.0Hz  (avg.: 7.4Hz)       82.0 events processed  (92.0 events read)  8.0Hz  (avg.: 7.4Hz)       85.0 events processed  (95.0 events read)  6.0Hz  (avg.: 7.4Hz)       87.0 events processed  (97.0 events read)  4.0Hz  (avg.: 7.2Hz)       91.0 events processed  (101.0 events read)  8.0Hz  (avg.: 7.2Hz)       95.0 events processed  (105.0 events read)  8.0Hz  (avg.: 7.3Hz)       99.0 events processed  (109.0 events read)  8.0Hz  (avg.: 7.3Hz)       103.0 events processed  (113.0 events read)  8.0Hz  (avg.: 7.3Hz)       105.0 events processed  (115.0 events read)  4.0Hz  (avg.: 7.2Hz)       111.0 events processed  (121.0 events read)  12.0Hz  (avg.: 7.4Hz)       114.0 events processed  (124.0 events read)  6.0Hz  (avg.: 7.3Hz)       117.0 events processed  (127.0 events read)  6.0Hz  (avg.: 7.3Hz)       119.0 events processed  (129.0 events read)  4.0Hz  (avg.: 7.2Hz)       123.0 events processed  (133.0 events read)  8.0Hz  (avg.: 7.2Hz)       127.0 events processed  (137.0 events read)  8.0Hz  (avg.: 7.2Hz)       130.0 events processed  (140.0 events read)  6.0Hz  (avg.: 7.2Hz)       134.0 events processed  (144.0 events read)  8.0Hz  (avg.: 7.2Hz)       136.0 events processed  (146.0 events read)  4.0Hz  (avg.: 7.1Hz)       139.0 events processed  (149.0 events read)  6.0Hz  (avg.: 7.1Hz)       145.0 events processed  (155.0 events read)  12.0Hz  (avg.: 7.2Hz)       148.0 events processed  (158.0 events read)  6.0Hz  (avg.: 7.2Hz)       150.0 events processed  (160.0 events read)  4.0Hz  (avg.: 7.1Hz)       155.0 events processed  (165.0 events read)  10.0Hz  (avg.: 7.2Hz)       159.0 events processed  (169.0 events read)  8.0Hz  (avg.: 7.2Hz)       161.0 events processed  (171.0 events read)  4.0Hz  (avg.: 7.1Hz)       166.0 events processed  (176.0 events read)  10.0Hz  (avg.: 7.2Hz)       170.0 events processed  (180.0 events read)  8.0Hz  (avg.: 7.2Hz)       173.0 events processed  (183.0 events read)  6.0Hz  (avg.: 7.2Hz)       178.0 events processed  (188.0 events read)  10.0Hz  (avg.: 7.2Hz)       181.0 events processed  (191.0 events read)  6.0Hz  (avg.: 7.2Hz)       185.0 events processed  (195.0 events read)  8.0Hz  (avg.: 7.2Hz)       189.0 events processed  (199.0 events read)  8.0Hz  (avg.: 7.3Hz)       192.0 events processed  (202.0 events read)  6.0Hz  (avg.: 7.2Hz)       195.0 events processed  (205.0 events read)  6.0Hz  (avg.: 7.2Hz)       198.0 events processed  (208.0 events read)  6.0Hz  (avg.: 7.2Hz)       202.0 events processed  (212.0 events read)  8.0Hz  (avg.: 7.2Hz)       206.0 events processed  (216.0 events read)  8.0Hz  (avg.: 7.2Hz)       209.0 events processed  (219.0 events read)  6.0Hz  (avg.: 7.2Hz)       213.0 events processed  (223.0 events read)  8.0Hz  (avg.: 7.2Hz)       216.0 events processed  (226.0 events read)  6.0Hz  (avg.: 7.2Hz)       218.0 events processed  (228.0 events read)  4.0Hz  (avg.: 7.1Hz)       224.0 events processed  (234.0 events read)  12.0Hz  (avg.: 7.2Hz)       229.0 events processed  (239.0 events read)  10.0Hz  (avg.: 7.3Hz)       233.0 events processed  (243.0 events read)  8.0Hz  (avg.: 7.3Hz)       238.0 events processed  (248.0 events read)  10.0Hz  (avg.: 7.3Hz)       242.0 events processed  (252.0 events read)  8.0Hz  (avg.: 7.3Hz)       248.0 events processed  (258.0 events read)  12.0Hz  (avg.: 7.4Hz)       250.0 events processed  (260.0 events read)  4.0Hz  (avg.: 7.3Hz)       252.0 events processed  (262.0 events read)  4.0Hz  (avg.: 7.3Hz)       256.0 events processed  (266.0 events read)  8.0Hz  (avg.: 7.3Hz)       261.0 events processed  (272.0 events read)  10.0Hz  (avg.: 7.3Hz)       265.0 events processed  (275.0 events read)  8.0Hz  (avg.: 7.4Hz)       270.0 events processed  (280.0 events read)  10.0Hz  (avg.: 7.4Hz)       273.0 events processed  (283.0 events read)  6.0Hz  (avg.: 7.4Hz)       276.0 events processed  (286.0 events read)  6.0Hz  (avg.: 7.4Hz)       279.0 events processed  (289.0 events read)  6.0Hz  (avg.: 7.3Hz)       282.0 events processed  (292.0 events read)  6.0Hz  (avg.: 7.3Hz)       285.0 events processed  (295.0 events read)  6.0Hz  (avg.: 7.3Hz)       290.0 events processed  (300.0 events read)  10.0Hz  (avg.: 7.3Hz)       293.0 events processed  (303.0 events read)  6.0Hz  (avg.: 7.3Hz)       295.0 events processed  (305.0 events read)  4.0Hz  (avg.: 7.3Hz)       298.0 events processed  (308.0 events read)  6.0Hz  (avg.: 7.3Hz)       302.0 events processed  (312.0 events read)  8.0Hz  (avg.: 7.3Hz)       306.0 events processed  (316.0 events read)  8.0Hz  (avg.: 7.3Hz)       309.0 events processed  (319.0 events read)  6.0Hz  (avg.: 7.3Hz)       312.0 events processed  (322.0 events read)  6.0Hz  (avg.: 7.2Hz)       315.0 events processed  (325.0 events read)  6.0Hz  (avg.: 7.2Hz)       319.0 events processed  (329.0 events read)  8.0Hz  (avg.: 7.2Hz)       325.0 events processed  (335.0 events read)  12.0Hz  (avg.: 7.3Hz)       328.0 events processed  (338.0 events read)  6.0Hz  (avg.: 7.3Hz)       333.0 events processed  (343.0 events read)  10.0Hz  (avg.: 7.3Hz)       335.0 events processed  (345.0 events read)  4.0Hz  (avg.: 7.3Hz)       338.0 events processed  (348.0 events read)  6.0Hz  (avg.: 7.3Hz)       342.0 events processed  (352.0 events read)  8.0Hz  (avg.: 7.3Hz)       345.0 events processed  (355.0 events read)  6.0Hz  (avg.: 7.3Hz)       351.0 events processed  (361.0 events read)  12.0Hz  (avg.: 7.3Hz)       355.0 events processed  (365.0 events read)  8.0Hz  (avg.: 7.3Hz)       359.0 events processed  (369.0 events read)  8.0Hz  (avg.: 7.3Hz)       361.0 events processed  (371.0 events read)  4.0Hz  (avg.: 7.3Hz)       365.0 events processed  (375.0 events read)  8.0Hz  (avg.: 7.3Hz)       368.0 events processed  (378.0 events read)  6.0Hz  (avg.: 7.3Hz)       370.0 events processed  (380.0 events read)  4.0Hz  (avg.: 7.2Hz)       374.0 events processed  (384.0 events read)  8.0Hz  (avg.: 7.3Hz)       378.0 events processed  (388.0 events read)  8.0Hz  (avg.: 7.3Hz)       381.0 events processed  (391.0 events read)  6.0Hz  (avg.: 7.2Hz)       384.0 events processed  (394.0 events read)  6.0Hz  (avg.: 7.2Hz)       389.0 events processed  (399.0 events read)  10.0Hz  (avg.: 7.3Hz)       393.0 events processed  (403.0 events read)  8.0Hz  (avg.: 7.3Hz)       396.0 events processed  (406.0 events read)  6.0Hz  (avg.: 7.3Hz)       400.0 events processed  (410.0 events read)  8.0Hz  (avg.: 7.3Hz)       404.0 events processed  (414.0 events read)  8.0Hz  (avg.: 7.3Hz)       408.0 events processed  (418.0 events read)  8.0Hz  (avg.: 7.3Hz)       411.0 events processed  (421.0 events read)  6.0Hz  (avg.: 7.3Hz)       415.0 events processed  (425.0 events read)  8.0Hz  (avg.: 7.3Hz)       418.0 events processed  (428.0 events read)  6.0Hz  (avg.: 7.3Hz)       421.0 events processed  (431.0 events read)  6.0Hz  (avg.: 7.3Hz)       425.0 events processed  (435.0 events read)  8.0Hz  (avg.: 7.3Hz)       428.0 events processed  (438.0 events read)  6.0Hz  (avg.: 7.2Hz)       431.0 events processed  (441.0 events read)  6.0Hz  (avg.: 7.2Hz)       433.0 events processed  (443.0 events read)  4.0Hz  (avg.: 7.2Hz)       436.0 events processed  (446.0 events read)  6.0Hz  (avg.: 7.2Hz)       439.0 events processed  (449.0 events read)  6.0Hz  (avg.: 7.2Hz)       442.0 events processed  (452.0 events read)  6.0Hz  (avg.: 7.2Hz)       446.0 events processed  (456.0 events read)  8.0Hz  (avg.: 7.2Hz)       448.0 events processed  (458.0 events read)  4.0Hz  (avg.: 7.2Hz)       452.0 events processed  (462.0 events read)  8.0Hz  (avg.: 7.2Hz)       455.0 events processed  (465.0 events read)  6.0Hz  (avg.: 7.2Hz)       460.0 events processed  (470.0 events read)  10.0Hz  (avg.: 7.2Hz)       464.0 events processed  (474.0 events read)  8.0Hz  (avg.: 7.2Hz)       467.0 events processed  (477.0 events read)  6.0Hz  (avg.: 7.2Hz)       471.0 events processed  (481.0 events read)  8.0Hz  (avg.: 7.2Hz)       475.0 events processed  (486.0 events read)  8.0Hz  (avg.: 7.2Hz)       479.0 events processed  (489.0 events read)  8.0Hz  (avg.: 7.2Hz)       482.0 events processed  (492.0 events read)  6.0Hz  (avg.: 7.2Hz)       488.0 events processed  (498.0 events read)  12.0Hz  (avg.: 7.2Hz)       492.0 events processed  (502.0 events read)  8.0Hz  (avg.: 7.2Hz)       495.0 events processed  (505.0 events read)  6.0Hz  (avg.: 7.2Hz)       498.0 events processed  (508.0 events read)  6.0Hz  (avg.: 7.2Hz)       501.0 events processed  (511.0 events read)  6.0Hz  (avg.: 7.2Hz)       506.0 events processed  (516.0 events read)  10.0Hz  (avg.: 7.2Hz)       510.0 events processed  (520.0 events read)  8.0Hz  (avg.: 7.2Hz)       514.0 events processed  (524.0 events read)  8.0Hz  (avg.: 7.2Hz)       520.0 events processed  (530.0 events read)  12.0Hz  (avg.: 7.3Hz)       524.0 events processed  (534.0 events read)  8.0Hz  (avg.: 7.3Hz)       526.0 events processed  (536.0 events read)  4.0Hz  (avg.: 7.2Hz)       530.0 events processed  (540.0 events read)  8.0Hz  (avg.: 7.3Hz)       533.0 events processed  (543.0 events read)  6.0Hz  (avg.: 7.2Hz)       536.0 events processed  (546.0 events read)  6.0Hz  (avg.: 7.2Hz)       544.0 events processed  (554.0 events read)  16.0Hz  (avg.: 7.3Hz)       548.0 events processed  (558.0 events read)  8.0Hz  (avg.: 7.3Hz)       552.0 events processed  (562.0 events read)  8.0Hz  (avg.: 7.3Hz)       556.0 events processed  (566.0 events read)  8.0Hz  (avg.: 7.3Hz)       560.0 events processed  (570.0 events read)  8.0Hz  (avg.: 7.3Hz)       562.0 events processed  (572.0 events read)  4.0Hz  (avg.: 7.3Hz)       567.0 events processed  (577.0 events read)  10.0Hz  (avg.: 7.3Hz)       570.0 events processed  (580.0 events read)  6.0Hz  (avg.: 7.3Hz)       574.0 events processed  (584.0 events read)  8.0Hz  (avg.: 7.3Hz)       577.0 events processed  (587.0 events read)  6.0Hz  (avg.: 7.3Hz)       580.0 events processed  (590.0 events read)  6.0Hz  (avg.: 7.3Hz)       584.0 events processed  (594.0 events read)  8.0Hz  (avg.: 7.3Hz)       589.0 events processed  (599.0 events read)  10.0Hz  (avg.: 7.3Hz)       592.0 events processed  (602.0 events read)  6.0Hz  (avg.: 7.3Hz)       595.0 events processed  (605.0 events read)  6.0Hz  (avg.: 7.3Hz)       600.0 events processed  (610.0 events read)  10.0Hz  (avg.: 7.3Hz)       603.0 events processed  (613.0 events read)  6.0Hz  (avg.: 7.3Hz)       608.0 events processed  (618.0 events read)  10.0Hz  (avg.: 7.3Hz)       612.0 events processed  (622.0 events read)  8.0Hz  (avg.: 7.3Hz)       616.0 events processed  (626.0 events read)  8.0Hz  (avg.: 7.3Hz)       618.0 events processed  (628.0 events read)  4.0Hz  (avg.: 7.3Hz)       623.0 events processed  (633.0 events read)  10.0Hz  (avg.: 7.3Hz)       626.0 events processed  (636.0 events read)  6.0Hz  (avg.: 7.3Hz)       630.0 events processed  (640.0 events read)  8.0Hz  (avg.: 7.3Hz)       634.0 events processed  (644.0 events read)  8.0Hz  (avg.: 7.3Hz)       636.0 events processed  (646.0 events read)  4.0Hz  (avg.: 7.3Hz)       640.0 events processed  (650.0 events read)  8.0Hz  (avg.: 7.3Hz)       644.0 events processed  (654.0 events read)  8.0Hz  (avg.: 7.3Hz)       647.0 events processed  (657.0 events read)  6.0Hz  (avg.: 7.3Hz)       652.0 events processed  (662.0 events read)  10.0Hz  (avg.: 7.3Hz)       654.0 events processed  (664.0 events read)  4.0Hz  (avg.: 7.3Hz)       659.0 events processed  (669.0 events read)  10.0Hz  (avg.: 7.3Hz)       663.0 events processed  (673.0 events read)  8.0Hz  (avg.: 7.3Hz)       666.0 events processed  (676.0 events read)  6.0Hz  (avg.: 7.3Hz)       669.0 events processed  (679.0 events read)  6.0Hz  (avg.: 7.3Hz)       673.0 events processed  (683.0 events read)  8.0Hz  (avg.: 7.3Hz)       676.0 events processed  (686.0 events read)  6.0Hz  (avg.: 7.3Hz)       679.0 events processed  (689.0 events read)  6.0Hz  (avg.: 7.3Hz)       682.0 events processed  (692.0 events read)  6.0Hz  (avg.: 7.3Hz)       686.0 events processed  (696.0 events read)  8.0Hz  (avg.: 7.3Hz)       690.0 events processed  (700.0 events read)  8.0Hz  (avg.: 7.3Hz)       693.0 events processed  (703.0 events read)  6.0Hz  (avg.: 7.3Hz)       697.0 events processed  (707.0 events read)  8.0Hz  (avg.: 7.3Hz)       701.0 events processed  (711.0 events read)  8.0Hz  (avg.: 7.3Hz)       705.0 events processed  (715.0 events read)  8.0Hz  (avg.: 7.3Hz)       708.0 events processed  (718.0 events read)  6.0Hz  (avg.: 7.3Hz)       713.0 events processed  (723.0 events read)  10.0Hz  (avg.: 7.3Hz)       715.0 events processed  (725.0 events read)  4.0Hz  (avg.: 7.3Hz)       719.0 events processed  (729.0 events read)  8.0Hz  (avg.: 7.3Hz)       724.0 events processed  (734.0 events read)  10.0Hz  (avg.: 7.3Hz)       728.0 events processed  (738.0 events read)  8.0Hz  (avg.: 7.3Hz)       731.0 events processed  (741.0 events read)  6.0Hz  (avg.: 7.3Hz)       736.0 events processed  (746.0 events read)  10.0Hz  (avg.: 7.3Hz)       739.0 events processed  (749.0 events read)  6.0Hz  (avg.: 7.3Hz)       745.0 events processed  (755.0 events read)  12.0Hz  (avg.: 7.3Hz)       748.0 events processed  (758.0 events read)  6.0Hz  (avg.: 7.3Hz)       752.0 events processed  (762.0 events read)  8.0Hz  (avg.: 7.3Hz)       754.0 events processed  (764.0 events read)  4.0Hz  (avg.: 7.3Hz)       758.0 events processed  (768.0 events read)  8.0Hz  (avg.: 7.3Hz)       758.0 events processed  (768.0 events read)  0.0Hz  (avg.: 7.3Hz)       765.0 events processed  (775.0 events read)  14.0Hz  (avg.: 7.3Hz)       768.0 events processed  (778.0 events read)  6.0Hz  (avg.: 7.3Hz)       771.0 events processed  (781.0 events read)  6.0Hz  (avg.: 7.3Hz)       776.0 events processed  (786.0 events read)  10.0Hz  (avg.: 7.3Hz)       779.0 events processed  (789.0 events read)  6.0Hz  (avg.: 7.3Hz)       783.0 events processed  (793.0 events read)  8.0Hz  (avg.: 7.3Hz)       787.0 events processed  (797.0 events read)  8.0Hz  (avg.: 7.3Hz)       790.0 events processed  (800.0 events read)  6.0Hz  (avg.: 7.3Hz)       794.0 events processed  (804.0 events read)  8.0Hz  (avg.: 7.3Hz)       797.0 events processed  (807.0 events read)  6.0Hz  (avg.: 7.3Hz)       801.0 events processed  (811.0 events read)  8.0Hz  (avg.: 7.3Hz)       806.0 events processed  (816.0 events read)  10.0Hz  (avg.: 7.3Hz)       809.0 events processed  (819.0 events read)  6.0Hz  (avg.: 7.3Hz)       813.0 events processed  (823.0 events read)  8.0Hz  (avg.: 7.3Hz)       818.0 events processed  (828.0 events read)  10.0Hz  (avg.: 7.3Hz)       822.0 events processed  (832.0 events read)  8.0Hz  (avg.: 7.3Hz)       825.0 events processed  (835.0 events read)  6.0Hz  (avg.: 7.3Hz)       830.0 events processed  (840.0 events read)  10.0Hz  (avg.: 7.3Hz)       832.0 events processed  (842.0 events read)  4.0Hz  (avg.: 7.3Hz)       836.0 events processed  (846.0 events read)  8.0Hz  (avg.: 7.3Hz)       840.0 events processed  (850.0 events read)  8.0Hz  (avg.: 7.3Hz)       844.0 events processed  (854.0 events read)  8.0Hz  (avg.: 7.3Hz)       849.0 events processed  (859.0 events read)  10.0Hz  (avg.: 7.3Hz)       851.0 events processed  (861.0 events read)  4.0Hz  (avg.: 7.3Hz)       854.0 events processed  (864.0 events read)  6.0Hz  (avg.: 7.3Hz)       855.0 events processed  (865.0 events read)  2.0Hz  (avg.: 7.3Hz)       860.0 events processed  (870.0 events read)  10.0Hz  (avg.: 7.3Hz)       862.0 events processed  (872.0 events read)  4.0Hz  (avg.: 7.3Hz)       865.0 events processed  (875.0 events read)  6.0Hz  (avg.: 7.3Hz)       868.0 events processed  (878.0 events read)  6.0Hz  (avg.: 7.3Hz)       869.0 events processed  (879.0 events read)  2.0Hz  (avg.: 7.3Hz)       870.0 events processed  (880.0 events read)  2.0Hz  (avg.: 7.2Hz)       872.0 events processed  (882.0 events read)  4.0Hz  (avg.: 7.2Hz)       877.0 events processed  (887.0 events read)  10.0Hz  (avg.: 7.2Hz)       880.0 events processed  (890.0 events read)  6.0Hz  (avg.: 7.2Hz)       883.0 events processed  (893.0 events read)  6.0Hz  (avg.: 7.2Hz)       887.0 events processed  (897.0 events read)  8.0Hz  (avg.: 7.2Hz)       890.0 events processed  (900.0 events read)  6.0Hz  (avg.: 7.2Hz)       892.0 events processed  (902.0 events read)  4.0Hz  (avg.: 7.2Hz)       896.0 events processed  (906.0 events read)  8.0Hz  (avg.: 7.2Hz)       899.0 events processed  (909.0 events read)  6.0Hz  (avg.: 7.2Hz)       904.0 events processed  (914.0 events read)  10.0Hz  (avg.: 7.2Hz)       908.0 events processed  (918.0 events read)  8.0Hz  (avg.: 7.2Hz)       912.0 events processed  (922.0 events read)  8.0Hz  (avg.: 7.2Hz)       916.0 events processed  (926.0 events read)  8.0Hz  (avg.: 7.2Hz)       920.0 events processed  (930.0 events read)  8.0Hz  (avg.: 7.2Hz)       924.0 events processed  (934.0 events read)  8.0Hz  (avg.: 7.2Hz)       929.0 events processed  (939.0 events read)  10.0Hz  (avg.: 7.3Hz)       932.0 events processed  (942.0 events read)  6.0Hz  (avg.: 7.2Hz)       937.0 events processed  (947.0 events read)  10.0Hz  (avg.: 7.3Hz)       939.0 events processed  (949.0 events read)  4.0Hz  (avg.: 7.2Hz)       942.0 events processed  (952.0 events read)  6.0Hz  (avg.: 7.2Hz)       945.0 events processed  (955.0 events read)  6.0Hz  (avg.: 7.2Hz)       950.0 events processed  (960.0 events read)  10.0Hz  (avg.: 7.2Hz)       953.0 events processed  (963.0 events read)  6.0Hz  (avg.: 7.2Hz)       957.0 events processed  (967.0 events read)  8.0Hz  (avg.: 7.2Hz)       960.0 events processed  (970.0 events read)  6.0Hz  (avg.: 7.2Hz)       964.0 events processed  (974.0 events read)  8.0Hz  (avg.: 7.2Hz)       967.0 events processed  (977.0 events read)  6.0Hz  (avg.: 7.2Hz)       972.0 events processed  (982.0 events read)  10.0Hz  (avg.: 7.3Hz)       976.0 events processed  (986.0 events read)  8.0Hz  (avg.: 7.3Hz)       979.0 events processed  (989.0 events read)  6.0Hz  (avg.: 7.2Hz)       982.0 events processed  (992.0 events read)  6.0Hz  (avg.: 7.2Hz)       986.0 events processed  (996.0 events read)  8.0Hz  (avg.: 7.2Hz)       988.0 events processed  (998.0 events read)  4.0Hz  (avg.: 7.2Hz)       991.0 events processed  (1001.0 events read)  6.0Hz  (avg.: 7.2Hz)       997.0 events processed  (1007.0 events read)  12.0Hz  (avg.: 7.2Hz)       1000.0 events processed  (1010.0 events read)  6.0Hz  (avg.: 7.2Hz)       1003.0 events processed  (1013.0 events read)  6.0Hz  (avg.: 7.2Hz)       1006.0 events processed  (1016.0 events read)  6.0Hz  (avg.: 7.2Hz)       1011.0 events processed  (1021.0 events read)  10.0Hz  (avg.: 7.2Hz)       1014.0 events processed  (1024.0 events read)  6.0Hz  (avg.: 7.2Hz)       1019.0 events processed  (1029.0 events read)  10.0Hz  (avg.: 7.2Hz)       1021.0 events processed  (1031.0 events read)  4.0Hz  (avg.: 7.2Hz)       1024.0 events processed  (1034.0 events read)  6.0Hz  (avg.: 7.2Hz)       1027.0 events processed  (1037.0 events read)  6.0Hz  (avg.: 7.2Hz)       1029.0 events processed  (1040.0 events read)  4.0Hz  (avg.: 7.2Hz)       1034.0 events processed  (1044.0 events read)  10.0Hz  (avg.: 7.2Hz)       1036.0 events processed  (1046.0 events read)  4.0Hz  (avg.: 7.2Hz)       1039.0 events processed  (1049.0 events read)  6.0Hz  (avg.: 7.2Hz)       1043.0 events processed  (1053.0 events read)  8.0Hz  (avg.: 7.2Hz)       1048.0 events processed  (1058.0 events read)  10.0Hz  (avg.: 7.2Hz)       1052.0 events processed  (1062.0 events read)  8.0Hz  (avg.: 7.2Hz)       1056.0 events processed  (1066.0 events read)  8.0Hz  (avg.: 7.2Hz)       1060.0 events processed  (1070.0 events read)  8.0Hz  (avg.: 7.2Hz)       1062.0 events processed  (1072.0 events read)  4.0Hz  (avg.: 7.2Hz)       1066.0 events processed  (1076.0 events read)  8.0Hz  (avg.: 7.2Hz)       1070.0 events processed  (1080.0 events read)  8.0Hz  (avg.: 7.2Hz)       1073.0 events processed  (1083.0 events read)  6.0Hz  (avg.: 7.2Hz)       1077.0 events processed  (1087.0 events read)  8.0Hz  (avg.: 7.2Hz)       1081.0 events processed  (1091.0 events read)  8.0Hz  (avg.: 7.2Hz)       1085.0 events processed  (1095.0 events read)  8.0Hz  (avg.: 7.2Hz)       1088.0 events processed  (1098.0 events read)  6.0Hz  (avg.: 7.2Hz)       1093.0 events processed  (1103.0 events read)  10.0Hz  (avg.: 7.2Hz)       1096.0 events processed  (1106.0 events read)  6.0Hz  (avg.: 7.2Hz)       1101.0 events processed  (1111.0 events read)  10.0Hz  (avg.: 7.2Hz)       1104.0 events processed  (1114.0 events read)  6.0Hz  (avg.: 7.2Hz)       1104.0 events processed  (1114.0 events read)  0.0Hz  (avg.: 7.2Hz)       1107.0 events processed  (1117.0 events read)  6.0Hz  (avg.: 7.2Hz)       1111.0 events processed  (1121.0 events read)  8.0Hz  (avg.: 7.2Hz)       1114.0 events processed  (1124.0 events read)  6.0Hz  (avg.: 7.2Hz)       1117.0 events processed  (1127.0 events read)  6.0Hz  (avg.: 7.2Hz)       1123.0 events processed  (1133.0 events read)  12.0Hz  (avg.: 7.2Hz)       1126.0 events processed  (1136.0 events read)  6.0Hz  (avg.: 7.2Hz)       1129.0 events processed  (1139.0 events read)  6.0Hz  (avg.: 7.2Hz)       1133.0 events processed  (1143.0 events read)  8.0Hz  (avg.: 7.2Hz)       1137.0 events processed  (1147.0 events read)  8.0Hz  (avg.: 7.2Hz)       1142.0 events processed  (1152.0 events read)  10.0Hz  (avg.: 7.2Hz)       1144.0 events processed  (1154.0 events read)  4.0Hz  (avg.: 7.2Hz)       1147.0 events processed  (1157.0 events read)  6.0Hz  (avg.: 7.2Hz)       1152.0 events processed  (1162.0 events read)  10.0Hz  (avg.: 7.2Hz)       1155.0 events processed  (1165.0 events read)  6.0Hz  (avg.: 7.2Hz)       1158.0 events processed  (1168.0 events read)  6.0Hz  (avg.: 7.2Hz)       1163.0 events processed  (1173.0 events read)  10.0Hz  (avg.: 7.2Hz)       1167.0 events processed  (1177.0 events read)  8.0Hz  (avg.: 7.2Hz)       1170.0 events processed  (1180.0 events read)  6.0Hz  (avg.: 7.2Hz)       1173.0 events processed  (1183.0 events read)  6.0Hz  (avg.: 7.2Hz)       1176.0 events processed  (1186.0 events read)  6.0Hz  (avg.: 7.2Hz)       1178.0 events processed  (1188.0 events read)  4.0Hz  (avg.: 7.2Hz)       1181.0 events processed  (1191.0 events read)  6.0Hz  (avg.: 7.2Hz)       1183.0 events processed  (1193.0 events read)  4.0Hz  (avg.: 7.2Hz)       1188.0 events processed  (1198.0 events read)  10.0Hz  (avg.: 7.2Hz)       1190.0 events processed  (1200.0 events read)  4.0Hz  (avg.: 7.2Hz)       1195.0 events processed  (1205.0 events read)  10.0Hz  (avg.: 7.2Hz)       1200.0 events processed  (1210.0 events read)  10.0Hz  (avg.: 7.2Hz)       1205.0 events processed  (1215.0 events read)  10.0Hz  (avg.: 7.2Hz)       1209.0 events processed  (1219.0 events read)  8.0Hz  (avg.: 7.2Hz)       1212.0 events processed  (1222.0 events read)  6.0Hz  (avg.: 7.2Hz)       1216.0 events processed  (1226.0 events read)  8.0Hz  (avg.: 7.2Hz)       1220.0 events processed  (1230.0 events read)  8.0Hz  (avg.: 7.2Hz)       1225.0 events processed  (1235.0 events read)  10.0Hz  (avg.: 7.2Hz)       1230.0 events processed  (1240.0 events read)  10.0Hz  (avg.: 7.2Hz)       1233.0 events processed  (1243.0 events read)  6.0Hz  (avg.: 7.2Hz)       1236.0 events processed  (1246.0 events read)  6.0Hz  (avg.: 7.2Hz)       1241.0 events processed  (1251.0 events read)  10.0Hz  (avg.: 7.2Hz)       1244.0 events processed  (1254.0 events read)  6.0Hz  (avg.: 7.2Hz)       1248.0 events processed  (1258.0 events read)  8.0Hz  (avg.: 7.2Hz)       1251.0 events processed  (1261.0 events read)  6.0Hz  (avg.: 7.2Hz)       1256.0 events processed  (1266.0 events read)  10.0Hz  (avg.: 7.2Hz)       1258.0 events processed  (1268.0 events read)  4.0Hz  (avg.: 7.2Hz)       1262.0 events processed  (1272.0 events read)  8.0Hz  (avg.: 7.2Hz)       1266.0 events processed  (1276.0 events read)  8.0Hz  (avg.: 7.2Hz)       1269.0 events processed  (1279.0 events read)  6.0Hz  (avg.: 7.2Hz)       1274.0 events processed  (1284.0 events read)  10.0Hz  (avg.: 7.2Hz)       1278.0 events processed  (1288.0 events read)  8.0Hz  (avg.: 7.2Hz)       1280.0 events processed  (1290.0 events read)  4.0Hz  (avg.: 7.2Hz)       1284.0 events processed  (1294.0 events read)  8.0Hz  (avg.: 7.2Hz)       1289.0 events processed  (1299.0 events read)  10.0Hz  (avg.: 7.2Hz)       1291.0 events processed  (1301.0 events read)  4.0Hz  (avg.: 7.2Hz)       1295.0 events processed  (1305.0 events read)  8.0Hz  (avg.: 7.2Hz)       1300.0 events processed  (1310.0 events read)  10.0Hz  (avg.: 7.2Hz)       1303.0 events processed  (1313.0 events read)  6.0Hz  (avg.: 7.2Hz)       1306.0 events processed  (1316.0 events read)  6.0Hz  (avg.: 7.2Hz)       1310.0 events processed  (1320.0 events read)  8.0Hz  (avg.: 7.2Hz)       1312.0 events processed  (1322.0 events read)  4.0Hz  (avg.: 7.2Hz)       1314.0 events processed  (1324.0 events read)  4.0Hz  (avg.: 7.2Hz)       1318.0 events processed  (1328.0 events read)  8.0Hz  (avg.: 7.2Hz)       1321.0 events processed  (1331.0 events read)  6.0Hz  (avg.: 7.2Hz)       1324.0 events processed  (1334.0 events read)  6.0Hz  (avg.: 7.2Hz)       1328.0 events processed  (1338.0 events read)  8.0Hz  (avg.: 7.2Hz)       1331.0 events processed  (1341.0 events read)  6.0Hz  (avg.: 7.2Hz)       1336.0 events processed  (1346.0 events read)  10.0Hz  (avg.: 7.2Hz)       1342.0 events processed  (1352.0 events read)  12.0Hz  (avg.: 7.2Hz)       1347.0 events processed  (1357.0 events read)  10.0Hz  (avg.: 7.2Hz)       1350.0 events processed  (1360.0 events read)  6.0Hz  (avg.: 7.2Hz)       1354.0 events processed  (1364.0 events read)  8.0Hz  (avg.: 7.2Hz)       1358.0 events processed  (1368.0 events read)  8.0Hz  (avg.: 7.2Hz)       1363.0 events processed  (1373.0 events read)  10.0Hz  (avg.: 7.2Hz)       1366.0 events processed  (1376.0 events read)  6.0Hz  (avg.: 7.2Hz)       1369.0 events processed  (1379.0 events read)  6.0Hz  (avg.: 7.2Hz)       1373.0 events processed  (1383.0 events read)  8.0Hz  (avg.: 7.2Hz)       1377.0 events processed  (1387.0 events read)  8.0Hz  (avg.: 7.2Hz)       1381.0 events processed  (1391.0 events read)  8.0Hz  (avg.: 7.2Hz)       1384.0 events processed  (1394.0 events read)  6.0Hz  (avg.: 7.2Hz)       1386.0 events processed  (1396.0 events read)  4.0Hz  (avg.: 7.2Hz)       1390.0 events processed  (1400.0 events read)  8.0Hz  (avg.: 7.2Hz)       1393.0 events processed  (1403.0 events read)  6.0Hz  (avg.: 7.2Hz)       1396.0 events processed  (1406.0 events read)  6.0Hz  (avg.: 7.2Hz)       1400.0 events processed  (1410.0 events read)  8.0Hz  (avg.: 7.2Hz)       1403.0 events processed  (1413.0 events read)  6.0Hz  (avg.: 7.2Hz)       1406.0 events processed  (1416.0 events read)  6.0Hz  (avg.: 7.2Hz)       1410.0 events processed  (1420.0 events read)  8.0Hz  (avg.: 7.2Hz)       1414.0 events processed  (1424.0 events read)  8.0Hz  (avg.: 7.2Hz)       1417.0 events processed  (1427.0 events read)  6.0Hz  (avg.: 7.2Hz)       1420.0 events processed  (1430.0 events read)  6.0Hz  (avg.: 7.2Hz)       1423.0 events processed  (1433.0 events read)  6.0Hz  (avg.: 7.2Hz)       1427.0 events processed  (1437.0 events read)  8.0Hz  (avg.: 7.2Hz)       1432.0 events processed  (1442.0 events read)  10.0Hz  (avg.: 7.2Hz)       1436.0 events processed  (1446.0 events read)  8.0Hz  (avg.: 7.2Hz)       1441.0 events processed  (1451.0 events read)  10.0Hz  (avg.: 7.2Hz)       1444.0 events processed  (1454.0 events read)  6.0Hz  (avg.: 7.2Hz)       1449.0 events processed  (1459.0 events read)  10.0Hz  (avg.: 7.2Hz)       1453.0 events processed  (1463.0 events read)  8.0Hz  (avg.: 7.2Hz)       1455.0 events processed  (1465.0 events read)  4.0Hz  (avg.: 7.2Hz)       1460.0 events processed  (1470.0 events read)  10.0Hz  (avg.: 7.2Hz)       1467.0 events processed  (1477.0 events read)  14.0Hz  (avg.: 7.3Hz)       1470.0 events processed  (1480.0 events read)  6.0Hz  (avg.: 7.3Hz)       1474.0 events processed  (1484.0 events read)  8.0Hz  (avg.: 7.3Hz)       1476.0 events processed  (1486.0 events read)  4.0Hz  (avg.: 7.3Hz)       1481.0 events processed  (1491.0 events read)  10.0Hz  (avg.: 7.3Hz)       1485.0 events processed  (1495.0 events read)  8.0Hz  (avg.: 7.3Hz)       1489.0 events processed  (1499.0 events read)  8.0Hz  (avg.: 7.3Hz)       1493.0 events processed  (1.5k events read)  8.0Hz  (avg.: 7.3Hz)       1497.0 events processed  (1.5k events read)  8.0Hz  (avg.: 7.3Hz)       1500.0 events processed  (1.5k events read)  6.0Hz  (avg.: 7.3Hz)       1.5k events processed  (1.5k events read)  4.0Hz  (avg.: 7.3Hz)       1.5k events processed  (1.5k events read)  8.0Hz  (avg.: 7.3Hz)       1.5k events processed  (1.5k events read)  8.0Hz  (avg.: 7.3Hz)       1.5k events processed  (1.5k events read)  10.0Hz  (avg.: 7.3Hz)       1.5k events processed  (1.5k events read)  6.0Hz  (avg.: 7.3Hz)       1.5k events processed  (1.5k events read)  10.0Hz  (avg.: 7.3Hz)       1.5k events processed  (1.5k events read)  8.0Hz  (avg.: 7.3Hz)       1.5k events processed  (1.5k events read)  6.0Hz  (avg.: 7.3Hz)       1.5k events processed  (1.5k events read)  10.0Hz  (avg.: 7.3Hz)       1.5k events processed  (1.5k events read)  4.0Hz  (avg.: 7.3Hz)       1.5k events processed  (1.6k events read)  8.0Hz  (avg.: 7.3Hz)       1.5k events processed  (1.6k events read)  12.0Hz  (avg.: 7.3Hz)       1.5k events processed  (1.6k events read)  4.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  10.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  8.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  2.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  8.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  6.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  10.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  4.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  8.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  12.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  8.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  4.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  6.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  10.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  10.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  6.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  10.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  6.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  10.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  8.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  4.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  6.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  10.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  10.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.6k events read)  6.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.7k events read)  10.0Hz  (avg.: 7.3Hz)       1.6k events processed  (1.7k events read)  6.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  8.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  4.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  8.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  10.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  4.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  8.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  8.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  2.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  10.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  8.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  12.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  4.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  8.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  6.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  8.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  10.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  8.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  4.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  8.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  6.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  6.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  8.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  8.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  6.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.7k events read)  8.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.8k events read)  6.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.8k events read)  6.0Hz  (avg.: 7.3Hz)       1.7k events processed  (1.8k events read)  10.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  8.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  10.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  10.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  12.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  4.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  10.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  6.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  10.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  8.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  8.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  6.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  10.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  8.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  8.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  4.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  6.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  2.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  10.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  6.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  8.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  4.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  8.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  4.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.8k events read)  6.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.9k events read)  10.0Hz  (avg.: 7.3Hz)       1.8k events processed  (1.9k events read)  4.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  12.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  8.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  10.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  4.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  6.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  8.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  4.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  10.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  6.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  6.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  8.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  10.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  8.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  10.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  2.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  8.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  8.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  8.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  8.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  12.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  6.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  8.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  6.0Hz  (avg.: 7.3Hz)       1.9k events processed  (1.9k events read)  12.0Hz  (avg.: 7.3Hz)       1.9k events processed  (2.0k events read)  6.0Hz  (avg.: 7.3Hz)       1.9k events processed  (2.0k events read)  12.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  6.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  8.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  6.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  6.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  6.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  8.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  8.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  6.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  8.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  8.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  12.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  8.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  10.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  6.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  6.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  6.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  8.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  6.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  8.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  8.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  8.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  10.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  2.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  10.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.0k events read)  8.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.1k events read)  2.0Hz  (avg.: 7.3Hz)       2.0k events processed  (2.1k events read)  14.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  10.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  4.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  6.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  10.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  12.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  6.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  6.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  4.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  6.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  10.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  4.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  12.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  4.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  10.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  8.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  8.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  6.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  8.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  10.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  4.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  10.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  6.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.1k events read)  8.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.2k events read)  12.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.2k events read)  6.0Hz  (avg.: 7.3Hz)       2.1k events processed  (2.2k events read)  10.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  8.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  6.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  10.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  4.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  10.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  8.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  6.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  4.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  6.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  6.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  8.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  8.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  12.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  8.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  8.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  8.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  8.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  8.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  8.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.2k events read)  8.0Hz  (avg.: 7.4Hz)       2.2k events processed  (2.2k events read)  12.0Hz  (avg.: 7.4Hz)       2.2k events processed  (2.2k events read)  6.0Hz  (avg.: 7.4Hz)       2.2k events processed  (2.2k events read)  6.0Hz  (avg.: 7.4Hz)       2.2k events processed  (2.2k events read)  6.0Hz  (avg.: 7.4Hz)       2.2k events processed  (2.3k events read)  8.0Hz  (avg.: 7.4Hz)       2.2k events processed  (2.3k events read)  4.0Hz  (avg.: 7.3Hz)       2.2k events processed  (2.3k events read)  6.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  6.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  6.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  10.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  6.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  6.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  6.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  8.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  10.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  4.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  8.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  10.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  6.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  6.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  10.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  6.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  8.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  6.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  10.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  4.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  8.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  10.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  4.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  8.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  8.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.3k events read)  10.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.4k events read)  4.0Hz  (avg.: 7.3Hz)       2.3k events processed  (2.4k events read)  8.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  10.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  8.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  8.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  8.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  8.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  6.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  10.0Hz  (avg.: 7.4Hz)       2.4k events processed  (2.4k events read)  4.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  8.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  8.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  6.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  6.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  4.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  8.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  6.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  8.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  6.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  8.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  10.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  8.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  6.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  6.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  8.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  8.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.4k events read)  8.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.5k events read)  8.0Hz  (avg.: 7.3Hz)       2.4k events processed  (2.5k events read)  10.0Hz  (avg.: 7.3Hz)       2.5k events processed  (2.5k events read)  8.0Hz  (avg.: 7.3Hz)       2.5k events processed  (2.5k events read)  6.0Hz  (avg.: 7.3Hz)       2.5k events processed  (2.5k events read)  8.0Hz  (avg.: 7.3Hz)       2.5k events processed  (2.5k events read)  10.0Hz  (avg.: 7.4Hz)       2.5k events processed  (2.5k events read)  6.0Hz  (avg.: 7.3Hz)       2.5k events processed  (2.5k events read)  4.0Hz  (avg.: 7.3Hz)       2.5k events processed  (2.5k events read)  8.0Hz  (avg.: 7.3Hz)       2.5k events processed  (2.5k events read)  12.0Hz  (avg.: 7.4Hz)       2.5k events processed  (2.5k events read)  8.0Hz  (avg.: 7.4Hz)       2.5k events processed  (2.5k events read)  6.0Hz  (avg.: 7.4Hz)       2.5k events processed  (2.5k events read)  8.0Hz  (avg.: 7.4Hz)       2.5k events processed  (2.5k events read)  8.0Hz  (avg.: 7.4Hz)       2.5k events processed  (2.5k events read)  6.0Hz  (avg.: 7.4Hz)       2.5k events processed  (2.5k events read)  8.0Hz  (avg.: 7.4Hz)       2.5k events processed  (2.5k events read)  6.0Hz  (avg.: 7.3Hz)       2.5k events processed  (2.5k events read)  6.0Hz  (avg.: 7.3Hz)       2.5k events processed  (2.5k events read)  6.0Hz  (avg.: 7.3Hz)       2.5k events processed  (2.5k events read)  8.0Hz  (avg.: 7.3Hz)       2.5k events processed  (2.5k events read)  8.0Hz  (avg.: 7.3Hz)       2.5k events processed  (2.5k events read)  8.0Hz  (avg.: 7.3Hz)       2.5k events processed  (2.5k events read)  8.0Hz  (avg.: 7.3Hz)       2.5k events processed  (2.5k events read)  6.0Hz  (avg.: 7.3Hz)       2.5k events processed  (2.5k events read)  8.0Hz  (avg.: 7.3Hz)       2.5k events processed  (2.5k events read)  10.0Hz  (avg.: 7.4Hz)       2.5k events processed  (2.6k events read)  8.0Hz  (avg.: 7.4Hz)       2.5k events processed  (2.6k events read)  10.0Hz  (avg.: 7.4Hz)       2.5k events processed  (2.6k events read)  2.0Hz  (avg.: 7.3Hz)       2.6k events processed  (2.6k events read)  10.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  6.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  10.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  6.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  10.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  6.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  6.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  10.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  6.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  6.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  6.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  8.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  10.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  8.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  6.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  8.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  8.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  8.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  6.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  6.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.6k events read)  4.0Hz  (avg.: 7.3Hz)       2.6k events processed  (2.6k events read)  4.0Hz  (avg.: 7.3Hz)       2.6k events processed  (2.6k events read)  8.0Hz  (avg.: 7.3Hz)       2.6k events processed  (2.6k events read)  10.0Hz  (avg.: 7.3Hz)       2.6k events processed  (2.6k events read)  8.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.7k events read)  8.0Hz  (avg.: 7.4Hz)       2.6k events processed  (2.7k events read)  6.0Hz  (avg.: 7.3Hz)       2.6k events processed  (2.7k events read)  4.0Hz  (avg.: 7.3Hz)       2.7k events processed  (2.7k events read)  6.0Hz  (avg.: 7.3Hz)       2.7k events processed  (2.7k events read)  8.0Hz  (avg.: 7.3Hz)       2.7k events processed  (2.7k events read)  10.0Hz  (avg.: 7.3Hz)       2.7k events processed  (2.7k events read)  6.0Hz  (avg.: 7.3Hz)       2.7k events processed  (2.7k events read)  8.0Hz  (avg.: 7.3Hz)       2.7k events processed  (2.7k events read)  6.0Hz  (avg.: 7.3Hz)       2.7k events processed  (2.7k events read)  6.0Hz  (avg.: 7.3Hz)       2.7k events processed  (2.7k events read)  8.0Hz  (avg.: 7.3Hz)       2.7k events processed  (2.7k events read)  8.0Hz  (avg.: 7.3Hz)       2.7k events processed  (2.7k events read)  6.0Hz  (avg.: 7.3Hz)       2.7k events processed  (2.7k events read)  10.0Hz  (avg.: 7.3Hz)       2.7k events processed  (2.7k events read)  10.0Hz  (avg.: 7.3Hz)       2.7k events processed  (2.7k events read)  6.0Hz  (avg.: 7.3Hz)       2.7k events processed  (2.7k events read)  8.0Hz  (avg.: 7.3Hz)     JANA >>
+JANA >>No more event sources
+JANA >>Thread 0x7f7afb358700 completed gracefully: Wed Jul 31 22:09:27 2024
+JANA >>
+JANA >>No more event sources
+JANA >>Thread 0x7f7af9b55700 completed gracefully: Wed Jul 31 22:09:27 2024
+JANA >>
+JANA >>No more event sources
+JANA >>Thread 0x7f7afab57700 completed gracefully: Wed Jul 31 22:09:27 2024
+  2.7k events processed  (2.7k events read)  0.0Hz  (avg.: 7.3Hz)     JANA >>Merging thread 0 (0x7f7afb358700) ...
+JANA >>Merging thread 1 (0x7f7af9b55700) ...
+JANA >>Merging thread 2 (0x7f7afab57700) ...
+JANA >>
+JANA >>No more event sources
+JANA >>Thread 0x7f7afa356700 completed gracefully: Wed Jul 31 22:09:27 2024
+JANA >>Merging thread 0 (0x7f7afa356700) ...
+Closed REST file dana_rest.hddm
+JANA >>Merging event reader thread ...
+JANA >> 2701 events processed  (2701 events read) Average rate: 7.3Hz
+
+Closed ROOT file
+JANA >>Closing shared object handle 0 ...
+JANA >>Closing shared object handle 1 ...
+JANA >>Closing shared object handle 2 ...
+JANA >>Closing shared object handle 3 ...
+JANA >>Closing shared object handle 4 ...
+Reaction Filter: PLUGINS monitoring_hists,ReactionFilter,danarest,mcthrown_tree,TrackingPulls

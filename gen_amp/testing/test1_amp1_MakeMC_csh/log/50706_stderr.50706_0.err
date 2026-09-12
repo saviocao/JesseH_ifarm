@@ -1,0 +1,158 @@
+Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT1 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT0 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT2 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT3 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+
+
+
+===========================================================
+There was a crash.
+This is the entire stack trace of all threads:
+===========================================================
+
+Thread 4 (Thread 0x7fb674452700 (LWP 2181516)):
+#0  0x00007fb67b1aab3b in do_futex_wait.constprop.1 () from /lib64/libpthread.so.0
+#1  0x00007fb67b1aabcf in __new_sem_wait_slow.constprop.0 () from /lib64/libpthread.so.0
+#2  0x00007fb67b1aac6b in sem_wait
+
+GLIBC_2.2.5 () from /lib64/libpthread.so.0
+#3  0x00007fb67a191718 in XrdPosixFile::DelayedDestroy(void*) () from /lib64/libXrdPosix.so.3
+#4  0x00007fb67747d9c7 in XrdSysThread_Xeq () from /lib64/libXrdUtils.so.3
+#5  0x00007fb67b1a4ea5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fb67a4a9b0d in clone () from /lib64/libc.so.6
+
+Thread 3 (Thread 0x7fb65ac00700 (LWP 2181576)):
+#0  0x00007fb67b1a839e in pthread_rwlock_wrlock () from /lib64/libpthread.so.0
+#1  0x00000000010e093d in WriteLock (name="app", this=<optimized out>, this=<optimized out>) at src/JANA/JApplication.h:354
+#2  jana::JApplication::RemoveJEventLoop (this=0x7fffd4b33680, loop=loop
+entry=0x7fb6500008c0) at src/JANA/JApplication.cc:950
+#3  0x00000000010fc4e0 in jana::JEventLoop::~JEventLoop (this=0x7fb6500008c0, __in_chrg=<optimized out>) at src/JANA/JEventLoop.cc:106
+#4  0x00000000010fcd99 in jana::JEventLoop::~JEventLoop (this=0x7fb6500008c0, __in_chrg=<optimized out>) at src/JANA/JEventLoop.cc:152
+#5  0x00000000010d5d77 in ~__pthread_cleanup_class (this=<synthetic pointer>, __in_chrg=<optimized out>) at /usr/include/pthread.h:555
+#6  LaunchThread (arg=0x7fffd4b33680) at src/JANA/JApplication.cc:1391
+#7  0x00007fb67b1a4ea5 in start_thread () from /lib64/libpthread.so.0
+#8  0x00007fb67a4a9b0d in clone () from /lib64/libc.so.6
+
+Thread 2 (Thread 0x7fb65a3ff700 (LWP 2181577)):
+#0  0x00007fb67a470659 in waitpid () from /lib64/libc.so.6
+#1  0x00007fb67a3edf62 in do_system () from /lib64/libc.so.6
+#2  0x00007fb67a3ee311 in system () from /lib64/libc.so.6
+#3  0x00007fb680d743f9 in TUnixSystem::StackTrace (this=0x20f65b0) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/unix/src/TUnixSystem.cxx:2405
+#4  0x00007fb680d76ccc in TUnixSystem::DispatchSignals (this=0x20f65b0, sig=kSigSegmentationViolation) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/unix/src/TUnixSystem.cxx:3625
+#5  <signal handler called>
+#6  0x00007fb67ad063d4 in ?? () from /lib64/libstdc++.so.6
+#7  0x00007fb67ad06694 in std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&) () from /lib64/libstdc++.so.6
+#8  0x00007fb680d374c1 in _M_insert_node (__z=0x7fb600e74940, __p=0x7fb651536d50, __x=<optimized out>, this=0x2142d40) at /usr/include/c++/4.8.2/bits/stl_tree.h:1575
+#9  std::_Rb_tree<std::string, std::pair<std::string const, TClass*>, std::_Select1st<std::pair<std::string const, TClass*> >, std::less<std::string>, std::allocator<std::pair<std::string const, TClass*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::string const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<std::string const, TClass*> >, std::piecewise_construct_t const&, std::tuple<std::string const&>&&, std::tuple<>&&) (this=this
+entry=0x2142d40, __pos=<error reading variable: Cannot access memory at address 0x2c>, __pos
+entry=...) at /usr/include/c++/4.8.2/bits/stl_tree.h:1676
+#10 0x00007fb680d2aa66 in operator[] (__k="10TObjString", this=0x2142d40) at /usr/include/c++/4.8.2/bits/stl_map.h:465
+#11 Add (obj=<synthetic pointer>, key="10TObjString", this=0x2142d40) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:355
+#12 TClass::AddClass (cl=cl
+entry=0x7fb600cfca50) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:468
+#13 0x00007fb680d2bb57 in TClass::Init (this=this
+entry=0x7fb600cfca50, name=name
+entry=0x7fb680d9d0fa "TObjString", cversion=cversion
+entry=1, typeinfo=typeinfo
+entry=0x7fb68105acd0 <typeinfo for TObjString>, isa=isa
+entry=0x2134990, dfil=dfil
+entry=0x7fb680d9d0ed "TObjString.h", ifil=ifil
+entry=0x7fb680da93d8 "/u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/base/src/TObjString.cxx", dl=dl
+entry=32, il=il
+entry=20, givenInfo=givenInfo
+entry=0x0, silent=silent
+entry=false) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:1393
+#14 0x00007fb680d348e0 in TClass::TClass (this=0x7fb600cfca50, name=0x7fb680d9d0fa "TObjString", cversion=<optimized out>, info=..., isa=0x2134990, dfil=0x7fb680d9d0ed "TObjString.h", ifil=0x7fb680da93d8 "/u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/base/src/TObjString.cxx", dl=32, il=20, silent=false) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:1290
+#15 0x00007fb680d34df4 in ROOT::CreateClass (cname=0x7fb680d9d0fa "TObjString", id=<optimized out>, info=..., isa=0x2134990, dfil=0x7fb680d9d0ed "TObjString.h", ifil=0x7fb680da93d8 "/u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/base/src/TObjString.cxx", dl=32, il=20) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:5521
+#16 0x00007fb680d4161e in ROOT::TGenericClassInfo::GetClass (this=0x7fb68108b700 <ROOT::GenerateInitInstanceLocal(TObjString const*)::instance>) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TGenericClassInfo.cxx:214
+#17 0x00007fb680c4fa4a in TObjString::Class () at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/build_dir/core/base/G__Core.cxx:13284
+#18 0x00007fb680ca0a49 in TObjString::IsEqual (this=0x7fb65153ae10, obj=0x7fb644bfe280) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/base/src/TObjString.cxx:38
+#19 0x00007fb680cfc34d in TList::FindObject (this=<optimized out>, obj=0x7fb644bfe280) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/cont/src/TList.cxx:523
+#20 0x00007fb680cfe7ec in TMap::Remove (this=0x7fb651522350, key=0x7fb644bfe280) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/cont/src/TMap.cxx:300
+#21 0x00007fb680cf8687 in TCollection::RecursiveRemove (this=0x7fb651522350, obj=0x7fb644bfe280) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/cont/src/TCollection.cxx:433
+#22 0x00007fb680cfc4e0 in TList::RecursiveRemove (this=0x7fb65153f2b0, obj=0x7fb644bfe280) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/cont/src/TList.cxx:666
+#23 0x00007fb67f31476e in TTree::RecursiveRemove (this=0x7fb644ea1b90, obj=0x7fb644bfe280) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/tree/tree/src/TTree.cxx:7315
+#24 0x00007fb680cfadab in THashList::RecursiveRemove (this=<optimized out>, obj=0x7fb644bfe280) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/cont/src/THashList.cxx:265
+#25 0x00007fb680cfc4e0 in TList::RecursiveRemove (this=0x20f9fa0, obj=0x7fb644bfe280) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/cont/src/TList.cxx:666
+#26 0x00007fb680cfadab in THashList::RecursiveRemove (this=<optimized out>, obj=0x7fb644bfe280) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/cont/src/THashList.cxx:265
+#27 0x00007fb680ca1cb8 in TObject::~TObject (this=0x7fb644bfe280, __in_chrg=<optimized out>) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/base/src/TObject.cxx:151
+#28 0x00007fb68000f1e9 in TH2F::~TH2F (this=0x7fb644bfe280, __in_chrg=<optimized out>) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/hist/hist/src/TH2.cxx:3441
+#29 0x0000000000c1085b in DBCALShower_factory_IU::erun() ()
+#30 0x00000000010fc531 in jana::JEventLoop::~JEventLoop (this=0x7fb6440008c0, __in_chrg=<optimized out>) at src/JANA/JEventLoop.cc:111
+#31 0x00000000010fcd99 in jana::JEventLoop::~JEventLoop (this=0x7fb6440008c0, __in_chrg=<optimized out>) at src/JANA/JEventLoop.cc:152
+#32 0x00000000010d5d77 in ~__pthread_cleanup_class (this=<synthetic pointer>, __in_chrg=<optimized out>) at /usr/include/pthread.h:555
+#33 LaunchThread (arg=0x7fffd4b33680) at src/JANA/JApplication.cc:1391
+#34 0x00007fb67b1a4ea5 in start_thread () from /lib64/libpthread.so.0
+#35 0x00007fb67a4a9b0d in clone () from /lib64/libc.so.6
+
+Thread 1 (Thread 0x7fb681db22c0 (LWP 2181515)):
+#0  0x00007fb67b1a6017 in pthread_join () from /lib64/libpthread.so.0
+#1  0x00000000010dfa38 in jana::JApplication::Run (this=0x7fffd4b33680, proc=<optimized out>, Nthreads=<optimized out>) at src/JANA/JApplication.cc:1809
+#2  0x000000000063250c in main ()
+===========================================================
+
+
+The lines below might hint at the cause of the crash.
+You may get help by asking at the ROOT forum http://root.cern.ch/forum.
+Only if you are really convinced it is a bug in ROOT then please submit a
+report at http://root.cern.ch/bugs. Please post the ENTIRE stack trace
+from above as an attachment in addition to anything else
+that might help us fixing this issue.
+===========================================================
+#6  0x00007fb67ad063d4 in ?? () from /lib64/libstdc++.so.6
+#7  0x00007fb67ad06694 in std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&) () from /lib64/libstdc++.so.6
+#8  0x00007fb680d374c1 in _M_insert_node (__z=0x7fb600e74940, __p=0x7fb651536d50, __x=<optimized out>, this=0x2142d40) at /usr/include/c++/4.8.2/bits/stl_tree.h:1575
+#9  std::_Rb_tree<std::string, std::pair<std::string const, TClass*>, std::_Select1st<std::pair<std::string const, TClass*> >, std::less<std::string>, std::allocator<std::pair<std::string const, TClass*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::string const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<std::string const, TClass*> >, std::piecewise_construct_t const&, std::tuple<std::string const&>&&, std::tuple<>&&) (this=this
+entry=0x2142d40, __pos=<error reading variable: Cannot access memory at address 0x2c>, __pos
+entry=...) at /usr/include/c++/4.8.2/bits/stl_tree.h:1676
+#10 0x00007fb680d2aa66 in operator[] (__k="10TObjString", this=0x2142d40) at /usr/include/c++/4.8.2/bits/stl_map.h:465
+#11 Add (obj=<synthetic pointer>, key="10TObjString", this=0x2142d40) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:355
+#12 TClass::AddClass (cl=cl
+entry=0x7fb600cfca50) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:468
+#13 0x00007fb680d2bb57 in TClass::Init (this=this
+entry=0x7fb600cfca50, name=name
+entry=0x7fb680d9d0fa "TObjString", cversion=cversion
+entry=1, typeinfo=typeinfo
+entry=0x7fb68105acd0 <typeinfo for TObjString>, isa=isa
+entry=0x2134990, dfil=dfil
+entry=0x7fb680d9d0ed "TObjString.h", ifil=ifil
+entry=0x7fb680da93d8 "/u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/base/src/TObjString.cxx", dl=dl
+entry=32, il=il
+entry=20, givenInfo=givenInfo
+entry=0x0, silent=silent
+entry=false) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:1393
+#14 0x00007fb680d348e0 in TClass::TClass (this=0x7fb600cfca50, name=0x7fb680d9d0fa "TObjString", cversion=<optimized out>, info=..., isa=0x2134990, dfil=0x7fb680d9d0ed "TObjString.h", ifil=0x7fb680da93d8 "/u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/base/src/TObjString.cxx", dl=32, il=20, silent=false) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:1290
+#15 0x00007fb680d34df4 in ROOT::CreateClass (cname=0x7fb680d9d0fa "TObjString", id=<optimized out>, info=..., isa=0x2134990, dfil=0x7fb680d9d0ed "TObjString.h", ifil=0x7fb680da93d8 "/u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/base/src/TObjString.cxx", dl=32, il=20) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TClass.cxx:5521
+#16 0x00007fb680d4161e in ROOT::TGenericClassInfo::GetClass (this=0x7fb68108b700 <ROOT::GenerateInitInstanceLocal(TObjString const*)::instance>) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/meta/src/TGenericClassInfo.cxx:214
+#17 0x00007fb680c4fa4a in TObjString::Class () at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/build_dir/core/base/G__Core.cxx:13284
+#18 0x00007fb680ca0a49 in TObjString::IsEqual (this=0x7fb65153ae10, obj=0x7fb644bfe280) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/base/src/TObjString.cxx:38
+#19 0x00007fb680cfc34d in TList::FindObject (this=<optimized out>, obj=0x7fb644bfe280) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/cont/src/TList.cxx:523
+#20 0x00007fb680cfe7ec in TMap::Remove (this=0x7fb651522350, key=0x7fb644bfe280) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/cont/src/TMap.cxx:300
+#21 0x00007fb680cf8687 in TCollection::RecursiveRemove (this=0x7fb651522350, obj=0x7fb644bfe280) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/cont/src/TCollection.cxx:433
+#22 0x00007fb680cfc4e0 in TList::RecursiveRemove (this=0x7fb65153f2b0, obj=0x7fb644bfe280) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/cont/src/TList.cxx:666
+#23 0x00007fb67f31476e in TTree::RecursiveRemove (this=0x7fb644ea1b90, obj=0x7fb644bfe280) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/tree/tree/src/TTree.cxx:7315
+#24 0x00007fb680cfadab in THashList::RecursiveRemove (this=<optimized out>, obj=0x7fb644bfe280) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/cont/src/THashList.cxx:265
+#25 0x00007fb680cfc4e0 in TList::RecursiveRemove (this=0x20f9fa0, obj=0x7fb644bfe280) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/cont/src/TList.cxx:666
+#26 0x00007fb680cfadab in THashList::RecursiveRemove (this=<optimized out>, obj=0x7fb644bfe280) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/cont/src/THashList.cxx:265
+#27 0x00007fb680ca1cb8 in TObject::~TObject (this=0x7fb644bfe280, __in_chrg=<optimized out>) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/core/base/src/TObject.cxx:151
+#28 0x00007fb68000f1e9 in TH2F::~TH2F (this=0x7fb644bfe280, __in_chrg=<optimized out>) at /u/group/halld/Software/builds/Linux_CentOS7-x86_64-gcc4.8.5-cntr/root/root-6.08.06^bs221/hist/hist/src/TH2.cxx:3441
+#29 0x0000000000c1085b in DBCALShower_factory_IU::erun() ()
+#30 0x00000000010fc531 in jana::JEventLoop::~JEventLoop (this=0x7fb6440008c0, __in_chrg=<optimized out>) at src/JANA/JEventLoop.cc:111
+#31 0x00000000010fcd99 in jana::JEventLoop::~JEventLoop (this=0x7fb6440008c0, __in_chrg=<optimized out>) at src/JANA/JEventLoop.cc:152
+#32 0x00000000010d5d77 in ~__pthread_cleanup_class (this=<synthetic pointer>, __in_chrg=<optimized out>) at /usr/include/pthread.h:555
+#33 LaunchThread (arg=0x7fffd4b33680) at src/JANA/JApplication.cc:1391
+#34 0x00007fb67b1a4ea5 in start_thread () from /lib64/libpthread.so.0
+#35 0x00007fb67a4a9b0d in clone () from /lib64/libc.so.6
+
+===========================================================
+
+
