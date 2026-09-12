@@ -1,0 +1,286 @@
+<HDDM class="s" version="1.0" xmlns="http://www.gluex.org/hddm">
+  <geometry maxOccurs="1" md5reconstruction="string" md5simulation="string" md5smear="string" minOccurs="0" />
+  <physicsEvent eventNo="int" maxOccurs="unbounded" runNo="int">
+    <dataVersionString maxOccurs="unbounded" minOccurs="0" text="string" />
+    <ccdbContext maxOccurs="unbounded" minOccurs="0" text="string" />
+    <reaction maxOccurs="unbounded" minOccurs="0" type="int" weight="float">
+      <beam minOccurs="0" type="Particle_t">
+        <momentum E="float" px="float" py="float" pz="float" />
+        <polarization Px="float" Py="float" Pz="float" minOccurs="0" />
+        <properties charge="int" mass="float" />
+      </beam>
+      <target minOccurs="0" type="Particle_t">
+        <momentum E="float" px="float" py="float" pz="float" />
+        <polarization Px="float" Py="float" Pz="float" minOccurs="0" />
+        <properties charge="int" mass="float" />
+      </target>
+      <vertex maxOccurs="unbounded">
+        <product decayVertex="int" id="int" maxOccurs="unbounded" mech="int" parentid="int" pdgtype="int" type="Particle_t">
+          <momentum E="float" px="float" py="float" pz="float" />
+          <polarization Px="float" Py="float" Pz="float" minOccurs="0" />
+          <properties charge="int" mass="float" minOccurs="0" />
+        </product>
+        <origin t="float" vx="float" vy="float" vz="float" />
+      </vertex>
+      <random maxOccurs="1" minOccurs="0" seed1="int" seed2="int" seed3="int" seed4="int" />
+      <userData description="string" maxOccurs="unbounded" minOccurs="0">
+        <userDataFloat data="float" maxOccurs="unbounded" meaning="string" minOccurs="0" />
+        <userDataInt data="int" maxOccurs="unbounded" meaning="string" minOccurs="0" />
+      </userData>
+    </reaction>
+    <hitView minOccurs="0" version="2.0">
+      <centralDC minOccurs="0">
+        <cdcStraw maxOccurs="unbounded" minOccurs="0" ring="int" straw="int">
+          <cdcStrawHit maxOccurs="unbounded" q="float" t="float">
+            <cdcDigihit minOccurs="0" peakAmp="float" />
+            <cdcHitQF QF="float" minOccurs="0" />
+          </cdcStrawHit>
+          <cdcStrawTruthHit d="float" itrack="int" maxOccurs="unbounded" ptype="int" q="float" t="float" />
+        </cdcStraw>
+        <cdcTruthPoint dEdx="float" dradius="float" maxOccurs="unbounded" minOccurs="0" phi="float" primary="boolean" ptype="int" px="float" py="float" pz="float" r="float" t="float" track="int" z="float">
+          <trackID itrack="int" minOccurs="0" />
+        </cdcTruthPoint>
+      </centralDC>
+      <forwardDC minOccurs="0">
+        <fdcChamber layer="int" maxOccurs="unbounded" module="int">
+          <fdcAnodeWire maxOccurs="unbounded" minOccurs="0" wire="int">
+            <fdcAnodeHit dE="float" maxOccurs="unbounded" t="float" />
+            <fdcAnodeTruthHit d="float" dE="float" itrack="int" maxOccurs="unbounded" ptype="int" t="float" t_unsmeared="float" />
+          </fdcAnodeWire>
+          <fdcCathodeStrip maxOccurs="unbounded" minOccurs="0" plane="int" strip="int">
+            <fdcCathodeHit maxOccurs="unbounded" q="float" t="float">
+              <fdcDigihit minOccurs="0" peakAmp="float" />
+            </fdcCathodeHit>
+            <fdcCathodeTruthHit itrack="int" maxOccurs="unbounded" ptype="int" q="float" t="float" />
+          </fdcCathodeStrip>
+          <fdcTruthPoint E="float" dEdx="float" dradius="float" maxOccurs="unbounded" minOccurs="0" primary="boolean" ptype="int" px="float" py="float" pz="float" t="float" track="int" x="float" y="float" z="float">
+            <trackID itrack="int" minOccurs="0" />
+          </fdcTruthPoint>
+        </fdcChamber>
+      </forwardDC>
+      <startCntr minOccurs="0">
+        <stcPaddle maxOccurs="unbounded" minOccurs="0" sector="int">
+          <stcHit dE="float" maxOccurs="unbounded" t="float">
+            <stcDigihit minOccurs="0" peakAmp="float" />
+          </stcHit>
+          <stcTruthHit dE="float" itrack="int" maxOccurs="unbounded" ptype="int" t="float" />
+        </stcPaddle>
+        <stcTruthPoint E="float" dEdx="float" maxOccurs="unbounded" minOccurs="0" phi="float" primary="boolean" ptype="int" px="float" py="float" pz="float" r="float" sector="int" t="float" track="int" z="float">
+          <trackID itrack="int" minOccurs="0" />
+        </stcTruthPoint>
+      </startCntr>
+      <barrelEMcal minOccurs="0">
+        <bcalCell layer="int" maxOccurs="unbounded" minOccurs="0" module="int" sector="int">
+          <bcalSiPMUpHit E="float" maxOccurs="unbounded" minOccurs="0" t="float" />
+          <bcalSiPMDownHit E="float" maxOccurs="unbounded" minOccurs="0" t="float" />
+          <bcalSiPMSpectrum bin_width="float" end="int" maxOccurs="unbounded" minOccurs="0" tstart="float" vals="string">
+            <bcalSiPMTruth E="float" incident_id="int" minOccurs="0" />
+          </bcalSiPMSpectrum>
+          <bcalfADCHit E="float" end="int" maxOccurs="unbounded" minOccurs="0" t="float" />
+          <bcalfADCDigiHit end="int" maxOccurs="unbounded" minOccurs="0" pulse_integral="int" pulse_time="int">
+            <bcalfADCPeak minOccurs="0" peakAmp="float" />
+          </bcalfADCDigiHit>
+          <bcalTDCHit end="int" maxOccurs="unbounded" minOccurs="0" t="float" />
+          <bcalTDCDigiHit end="int" maxOccurs="unbounded" minOccurs="0" time="float" />
+          <bcalTruthHit E="float" incident_id="int" maxOccurs="unbounded" minOccurs="0" t="float" zLocal="float" />
+        </bcalCell>
+        <bcalTruthIncidentParticle id="int" maxOccurs="unbounded" minOccurs="0" ptype="int" px="float" py="float" pz="float" x="float" y="float" z="float" />
+        <bcalTruthShower E="float" maxOccurs="unbounded" minOccurs="0" phi="float" primary="boolean" ptype="int" px="float" py="float" pz="float" r="float" t="float" track="int" z="float">
+          <trackID itrack="int" minOccurs="0" />
+        </bcalTruthShower>
+      </barrelEMcal>
+      <gapEMcal minOccurs="0">
+        <gcalCell maxOccurs="48" minOccurs="0" module="int">
+          <gcalHit E="float" maxOccurs="unbounded" minOccurs="0" t="float" zLocal="float" />
+          <gcalTruthHit E="float" maxOccurs="unbounded" minOccurs="0" t="float" zLocal="float" />
+        </gcalCell>
+        <gcalTruthShower E="float" maxOccurs="unbounded" minOccurs="0" phi="float" primary="boolean" ptype="int" px="float" py="float" pz="float" r="float" t="float" track="int" z="float">
+          <trackID itrack="int" minOccurs="0" />
+        </gcalTruthShower>
+      </gapEMcal>
+      <Cerenkov minOccurs="0">
+        <cereSection maxOccurs="unbounded" minOccurs="0" sector="int">
+          <cereHit maxOccurs="unbounded" pe="float" t="float" />
+          <cereTruthHit maxOccurs="unbounded" pe="float" t="float" />
+        </cereSection>
+        <cereTruthPoint E="float" maxOccurs="unbounded" minOccurs="0" primary="boolean" ptype="int" px="float" py="float" pz="float" t="float" track="int" x="float" y="float" z="float">
+          <trackID itrack="int" minOccurs="0" />
+        </cereTruthPoint>
+      </Cerenkov>
+      <RICH minOccurs="0">
+        <richTruthHit maxOccurs="unbounded" minOccurs="0" t="float" x="float" y="float" z="float" />
+        <richTruthPoint E="float" maxOccurs="unbounded" minOccurs="0" primary="boolean" ptype="int" px="float" py="float" pz="float" t="float" track="int" x="float" y="float" z="float">
+          <trackID itrack="int" minOccurs="0" />
+        </richTruthPoint>
+      </RICH>
+      <DIRC minOccurs="0">
+        <dircTruthBarHit E="float" bar="int" maxOccurs="unbounded" minOccurs="0" pdg="int" px="float" py="float" pz="float" t="float" track="int" x="float" y="float" z="float" />
+        <dircTruthPmtHit E="float" ch="int" key_bar="int" maxOccurs="unbounded" minOccurs="0" t="float" x="float" y="float" z="float">
+          <dircTruthPmtHitExtra bbrefl="boolean" maxOccurs="unbounded" minOccurs="0" path="long" refl="int" t_fixed="float" />
+        </dircTruthPmtHit>
+        <dircPmtHit ch="int" maxOccurs="unbounded" minOccurs="0" t="float" />
+      </DIRC>
+      <forwardTOF minOccurs="0">
+        <ftofCounter bar="int" maxOccurs="unbounded" minOccurs="0" plane="int">
+          <ftofHit dE="float" end="int" maxOccurs="unbounded" minOccurs="0" t="float">
+            <ftofDigihit minOccurs="0" peakAmp="float" />
+          </ftofHit>
+          <ftofTruthHit dE="float" end="int" maxOccurs="unbounded" minOccurs="0" t="float">
+            <ftofTruthExtra E="float" dist="float" itrack="int" maxOccurs="unbounded" minOccurs="0" ptype="int" px="float" py="float" pz="float" x="float" y="float" z="float" />
+          </ftofTruthHit>
+        </ftofCounter>
+        <ftofTruthPoint E="float" maxOccurs="unbounded" minOccurs="0" primary="boolean" ptype="int" px="float" py="float" pz="float" t="float" track="int" x="float" y="float" z="float">
+          <trackID itrack="int" minOccurs="0" />
+        </ftofTruthPoint>
+      </forwardTOF>
+      <forwardEMcal minOccurs="0">
+        <fcalBlock column="int" maxOccurs="unbounded" minOccurs="0" row="int">
+          <fcalHit E="float" maxOccurs="unbounded" t="float">
+            <fcalDigihit integralOverPeak="float" minOccurs="0" />
+          </fcalHit>
+          <fcalTruthHit E="float" maxOccurs="unbounded" t="float">
+            <fcalTruthLightGuide dE="float" maxOccurs="unbounded" t="float" />
+          </fcalTruthHit>
+        </fcalBlock>
+        <fcalTruthShower E="float" maxOccurs="unbounded" minOccurs="0" primary="boolean" ptype="int" px="float" py="float" pz="float" t="float" track="int" x="float" y="float" z="float">
+          <trackID itrack="int" minOccurs="0" />
+        </fcalTruthShower>
+      </forwardEMcal>
+      <CrystalEcal minOccurs="0">
+        <ecalBlock column="int" maxOccurs="unbounded" minOccurs="0" row="int">
+          <ecalHit E="float" maxOccurs="unbounded" t="float" />
+          <ecalTruthHit E="float" maxOccurs="unbounded" t="float" />
+        </ecalBlock>
+        <ecalTruthShower E="float" maxOccurs="unbounded" minOccurs="0" primary="boolean" ptype="int" px="float" py="float" pz="float" t="float" track="int" x="float" y="float" z="float">
+          <trackID itrack="int" minOccurs="0" />
+        </ecalTruthShower>
+      </CrystalEcal>
+      <ComptonEMcal minOccurs="0">
+        <ccalBlock column="int" maxOccurs="unbounded" minOccurs="0" row="int">
+          <ccalHit E="float" maxOccurs="unbounded" t="float" />
+          <ccalTruthHit E="float" maxOccurs="unbounded" t="float" />
+        </ccalBlock>
+        <ccalTruthShower E="float" maxOccurs="unbounded" minOccurs="0" primary="boolean" ptype="int" px="float" py="float" pz="float" t="float" track="int" x="float" y="float" z="float">
+          <trackID itrack="int" minOccurs="0" />
+        </ccalTruthShower>
+      </ComptonEMcal>
+      <upstreamEMveto minOccurs="0">
+        <upvPaddle layer="int" maxOccurs="unbounded" minOccurs="0" row="int">
+          <upvHit E="float" end="int" maxOccurs="unbounded" minOccurs="0" t="float" />
+          <upvTruthHit E="float" end="int" maxOccurs="unbounded" minOccurs="0" t="float" xlocal="float" />
+        </upvPaddle>
+        <upvTruthShower E="float" maxOccurs="unbounded" minOccurs="0" primary="boolean" ptype="int" px="float" py="float" pz="float" t="float" track="int" x="float" y="float" z="float">
+          <trackID itrack="int" minOccurs="0" />
+        </upvTruthShower>
+      </upstreamEMveto>
+      <tagger minOccurs="0">
+        <microChannel E="float" column="int" maxOccurs="unbounded" minOccurs="0" row="int">
+          <taggerHit maxOccurs="unbounded" minOccurs="0" npe="int" t="float" tADC="float" />
+          <taggerTruthHit E="float" bg="int" dE="float" maxOccurs="unbounded" minOccurs="0" t="float" />
+        </microChannel>
+        <hodoChannel E="float" counterId="int" maxOccurs="unbounded" minOccurs="0">
+          <taggerHit maxOccurs="unbounded" minOccurs="0" npe="int" t="float" tADC="float" />
+          <taggerTruthHit E="float" bg="int" dE="float" maxOccurs="unbounded" minOccurs="0" t="float" />
+        </hodoChannel>
+      </tagger>
+      <pairSpectrometerFine minOccurs="0">
+        <psTile arm="int" column="int" maxOccurs="unbounded" minOccurs="0">
+          <psHit dE="float" maxOccurs="unbounded" t="float" />
+          <psTruthHit dE="float" itrack="int" maxOccurs="unbounded" ptype="int" t="float" />
+        </psTile>
+        <psTruthPoint E="float" arm="int" column="int" dEdx="float" maxOccurs="unbounded" minOccurs="0" primary="boolean" ptype="int" px="float" py="float" pz="float" t="float" track="int" x="float" y="float" z="float">
+          <trackID itrack="int" minOccurs="0" />
+        </psTruthPoint>
+      </pairSpectrometerFine>
+      <pairSpectrometerCoarse minOccurs="0">
+        <pscPaddle arm="int" maxOccurs="unbounded" minOccurs="0" module="int">
+          <pscHit dE="float" maxOccurs="unbounded" t="float" />
+          <pscTruthHit dE="float" itrack="int" maxOccurs="unbounded" ptype="int" t="float" />
+        </pscPaddle>
+        <pscTruthPoint E="float" arm="int" dEdx="float" maxOccurs="unbounded" minOccurs="0" module="int" primary="boolean" ptype="int" px="float" py="float" pz="float" t="float" track="int" x="float" y="float" z="float">
+          <trackID itrack="int" minOccurs="0" />
+        </pscTruthPoint>
+      </pairSpectrometerCoarse>
+      <tripletPolarimeter minOccurs="0">
+        <tpolSector maxOccurs="unbounded" minOccurs="0" ring="int" sector="int">
+          <tpolHit dE="float" maxOccurs="unbounded" t="float" />
+          <tpolTruthHit dE="float" itrack="int" maxOccurs="unbounded" ptype="int" t="float" />
+        </tpolSector>
+        <tpolTruthPoint E="float" dEdx="float" maxOccurs="unbounded" minOccurs="0" phi="float" primary="boolean" ptype="int" px="float" py="float" pz="float" r="float" t="float" track="int">
+          <trackID itrack="int" minOccurs="0" />
+        </tpolTruthPoint>
+      </tripletPolarimeter>
+      <mcTrajectory minOccurs="0">
+        <mcTrajectoryPoint E="float" dE="float" maxOccurs="unbounded" mech="int" minOccurs="0" part="int" primary_track="int" px="float" py="float" pz="float" radlen="float" step="float" t="float" track="int" x="float" y="float" z="float" />
+      </mcTrajectory>
+      <RFtime jtag="string" minOccurs="0" tsync="float" tunit="ns">
+        <RFsubsystem jtag="string" maxOccurs="unbounded" minOccurs="0" tsync="float" tunit="ns" />
+      </RFtime>
+      <forwardMWPC minOccurs="0">
+        <fmwpcChamber layer="int" maxOccurs="unbounded" minOccurs="0" wire="int">
+          <fmwpcTruthHit dE="float" dx="float" maxOccurs="unbounded" t="float">
+            <fmwpcTruthHitQ d="float" maxOccurs="unbounded" q="float" />
+          </fmwpcTruthHit>
+          <fmwpcHit dE="float" maxOccurs="unbounded" t="float">
+            <fmwpcHitQ maxOccurs="unbounded" q="float" />
+          </fmwpcHit>
+        </fmwpcChamber>
+        <fmwpcTruthPoint E="float" maxOccurs="unbounded" minOccurs="0" primary="boolean" ptype="int" px="float" py="float" pz="float" t="float" track="int" x="float" y="float" z="float">
+          <trackID itrack="int" minOccurs="0" />
+        </fmwpcTruthPoint>
+      </forwardMWPC>
+      <cppTOF minOccurs="0">
+        <ctofCounter bar="int" maxOccurs="unbounded" minOccurs="0">
+          <ctofHit dE="float" end="int" maxOccurs="unbounded" minOccurs="0" t="float" />
+          <ctofTruthHit dE="float" end="int" maxOccurs="unbounded" minOccurs="0" t="float" />
+        </ctofCounter>
+        <ctofTruthPoint E="float" maxOccurs="unbounded" minOccurs="0" primary="boolean" ptype="int" px="float" py="float" pz="float" t="float" track="int" x="float" y="float" z="float">
+          <trackID itrack="int" minOccurs="0" />
+        </ctofTruthPoint>
+      </cppTOF>
+    </hitView>
+    <reconView minOccurs="0" version="1.0">
+      <tracktimebased FOM="float" Ndof="int" candidateid="int" chisq="float" id="int" maxOccurs="unbounded" minOccurs="0" trackid="int">
+        <momentum E="float" px="float" py="float" pz="float" />
+        <properties charge="int" mass="float" />
+        <origin t="float" vx="float" vy="float" vz="float" />
+        <errorMatrix Ncols="int" Nrows="int" type="string" vals="string" />
+        <TrackingErrorMatrix Ncols="int" Nrows="int" type="string" vals="string" />
+      </tracktimebased>
+    </reconView>
+  </physicsEvent>
+</HDDM>
+  d      \        Åý          <       ?€     (      Ax         Ax                   (      ?p2˜                      ?p2˜   ¼                           A      @ÇmA>ÑÅ>¢Çc@Æ|                          A      ?/­æ>âòû½°c>wê                         ð      @C&ª¿íï¾m†•@+ €                       B„†Ý   rñà¹RÃwÁrTh@›              d      \        Åý          <       ?€     (      A3ø…        A3ø…                  (      ?p2˜                      ?p2˜   ¼                           A      A ¡×½È“š?C¤A o                         A      ?˜×M>µF!¿PD]? Þ£                         ð      @<ûº¾ƒ!;>†q@'\°                       BMºC   N+' 2P0°Ík­Ë0              d      \        Åý          <       ?€     (      @Ë%        @Ë%                  (      ?p2˜                      ?p2˜   ¼                           A      ?ÊnÞ¾¡3p<«†á?¼Z                         A      ?uC›?=)Õ=ÛT'>®çD                         ð      @—ç¨¾Ù ;¾ð@‘55                       Bt
+³   0þéN7l2ÇD}*vyA              d      \        Åý          <       ?€     (      Aãï        Aãï                  (      ?p2˜                      ?p2˜   ¼                           A      @·¢ò>3UJ>šñ@¶²                         A      ?#|¾{f`¾¤µ8¼˜8                         ð      @gw=",=“žý@W\(                       Bk8   b­TWB5U”©/]Ùé´              d      \        Åý          <       ?€     (      @òÄC        @òÄC                  (      ?p2˜                      ?p2˜   ¼                           A      @²|#>åÝ>x=ü@±	}                         A      ?O->RÕ =×ï>Œ×l                         ð      @‰¿'?Ö¾±æº?ãµ=                       BŒÄ   BÜ°¤8Ê†=cö*E„­              d      \        Åý          <       ?€     (      A3­        A3­                  (      ?p2˜                      ?p2˜   ¼                           A      @vÚ¿#@V>Ý@nýä                         A      ?˜ }¾3F¿\	?#©h                         ð      @›> ?P×>Ûƒ@’s;                       Bšc~   P(:„Œ2¨*n”©¬              d      \        Åý          <       ?€     (      @Õ4É        @Õ4É                  (      ?p2˜                      ?p2˜   ¼                           A      @Š‡…>”ìÐ=oâ·@‰L9                         A      ?Í¯½ÉáÊ¾¦²T=¡€                         ð      @*³Ã¾Dèº>ˆµþ@Ä3                       B•ÄÛ   o7Î©vÚ
+?¦C\+Iêö              d      \        Åý          <       ?€     (      A(±\        A(±\                  (      ?p2˜                      ?p2˜   ¼                           A      @ÑV¹=|ì¿1xª@ÏŽš                         A      ?Å‚Y¿F”M?5å?‚B                         ð      @Ycy?>,~¼bŽÁ@B‡=                       BHÔ   Á…Ž\„ß?iî¿•              d      \      	  Åý          <       ?€     (      AÁ        AÁ                  (      ?p2˜                      ?p2˜   ¼                           A      @··g>+“@¾HP@¶Ù¬                         A      ?&zÖ½Á»ê¾Âg¥>%Vo                         ð      @+Z(½•j—?GØ@RG                       BOmË   PÄJD{©b{—É„Ðà              d      \      
+  Åý          <       ?€     (      A&ÈŽ        A&ÈŽ                  (      ?p2˜                      ?p2˜   ¼                           A      @ÿÇ¯=Zý{½Uß@ÿGÑ                         A      ?Ÿ…>ˆ…? h?jˆ                          ð      @¼¾£äÈ¿É*?ÃàÙ                       BUg   y¬¶R^V/'p­±K‚Û)              d      \        Åý          <       ?€     (      A2ƒ        A2ƒ                  (      ?p2˜                      ?p2˜   ¼                           A      AI¾™$?.œBA…¹                         A      ?˜L¼ŠR>Sî;=Óô‹                         ð      @JX>Èl¿c—Ñ@-U¥                       B}*š   1ü7Œ˜:3ÀGCRR»              d      \        Åý          <       ?€     (      @õ¿        @õ¿                  (      ?p2˜                      ?p2˜   ¼                           A      @gÛµ¾ô,¿	5›@aò                         A      ? /‹?Í¹?Dö’?+Œ!                         ð      @nJ«½\Ò+¾oÝ@^>„                       Bab   0ÂJSŽ¿¶ÊgÈCƒ(r              d      \        Åý          <       ?€     (      AÈ¤        AÈ¤                  (      ?p2˜                      ?p2˜   ¼                           A      @ûèX¾«]¾k‘V@ûB¬                         A      ?åJ¾u¾Š5=4õá                         ð      @!%3>ŒÖi>ÄÅ@Éa                       Bj¢Ã   aÁÛ6“>øûJ
+ç>              d      \        Åý          <       ?€     (      A*ñ        A*ñ                  (      ?p2˜                      ?p2˜   ¼                           A      A	"¾|Cœ>ìŒ×A‰W                         A      ?\²¾1Gô».è=,vÝ                         ð      @.€³>ÖÅÈ¾ë0@X‹                       B}nZ   (¡•¤Tj¶d£G/¸              d      \        Åý          <       ?€     (      @ØLû        @ØLû                  (      ?p2˜                      ?p2˜   ¼                           A      @aÆ¼âU>ü†Ð@\žW                         A      ?ÄLr?I<^=mS?œ›                         ð      @)f¿B+”¿™@ñQ                       BQ/£   J•gQNMÓ<ÊoÅSè              d      \        Åý          <       ?€     (      A ÒI        A ÒI                  (      ?p2˜                      ?p2˜   ¼                           A      @¢‘L¿Á¾O@¤@ ª°                         A      ?‡²$?$?Á?%Î                         ð      @6Z »L ¾¨0@ *O                       BjÉR   r£îD¦¸ï:JÆæ~®              d      \        Åý          <       ?€     (      @îYo        @îYo                  (      ?p2˜                      ?p2˜   ¼                           A      @¥]P?)qO¿>öO@¡|4                         A      ?ƒ~T¾æÀ˜>V†‘?@[Û                         ð      @E¸¾XD?	Tª?ÓFý                       BL³C   ~ÄÒp
+©ôf”ªch_Z              d      \        Åý          <       ?€     (      Afø        Afø                  (      ?p2˜                      ?p2˜   ¼                           A      @O½™³ã¿ @ŠÓ	                         A      ?%nÏ¾’>ÇÁs<–                         ð      @~4>bl>`}M@nÉ›                       BO·ì   9^ÿqy¤d0qE(Ê	c              d      \        Åý          <       ?€     (      Aþp        Aþp                  (      ?p2˜                      ?p2˜   ¼                           A      @qV =·Â‚½ùR7@o=                         A      ?X>ñ¾á0? žÓ>Bo                         ð      @šPE>³¾Âé@“z®                       BŒSÕ   lUIæœŒ:áMõé[              d      \        Åý          <       ?€     (      A        A                  (      ?p2˜                      ?p2˜   ¼                           A      @ÆU”>”9?8Š\@Ä"¿                         A      ?Ä÷ú=°ä¿y}ä?ŠFC                         ð      @%%×¾À?@>ç@
+×¶                       B•;*   3OGÑ}*ØUv	µ              d      \        Åý          <       ?€     (      A	éÌ        A	éÌ                  (      ?p2˜                      ?p2˜   ¼                           A      @ªºV¾jÒÐ=-t@©Õ                          A      ?t0ù=Ü)'¿4i>ÌÜÞ                         ð      @Q2í=ù|z?*2’@:aU                       B¸   O1MÜPÜQ˜b‹qpM              d      \        Åý          <       ?€     (      @Õ3         @Õ3                   (      ?p2˜                      ?p2˜   ¼                           A      ?ÔØ¾ˆ¸ ½¦¤?ÇA                         A      ?ºµž?„Ë>
+º?cÃn                         ð      @‡¶¿E9ç½;ž@†êO                       BQáÐ   /´k1ÏImJj)l”              d      \        Åý          <       ?€     (      A)s        A)s                  (      ?p2˜                      ?p2˜   ¼                           A      @Á5´?Äµ=4{@¿¥>                         A      ?P¯¿Ç>v =þ&q                         ð      @”çn: $L¾‘›ò@Ž{                       By+³   |ýoNSDNaµ‘0DØ¢M              d      \        Åý          <       ?€     (      @×äŸ        @×äŸ                  (      ?p2˜                      ?p2˜   ¼                           A      @R×?r¿<îs@GÍ[                         A      ?°Æ¿#£Ž?#dW?k°                         ð      @@Õ=ÄXá=ÌPã@-â                       BŸõÌ   !¿fyÉÎ$m(WGdñ              d      \        Åý          <       ?€     (      @ãî¹        @ãî¹                  (      ?p2˜                      ?p2˜   ¼                           A      @}ëd>ïbz¿Z @t&J                         A      ?Íf¿@Ëz>Ãã³?¢V                         ð      @{>’4{>ðEŽ@Œ                        B}q0   C/tEcä&Ø ›ncUß              d      \        Åý          <       ?€     (      @ä+ù        @ä+ù                  (      ?p2˜                      ?p2˜   ¼                           A      @KŠÇ?
+ïr>k @E                         A      ?ãÙ­¿;A¾dí?¤Ð”                         ð      @Fìú?‡»óÁ@0n¥                       Bj‹   ¸¨'PÜ¼~Ù³YõŽ              d      \        Åý          <       ?€     (      @énw        @énw                  (      ?p2˜                      ?p2˜   ¼                           A      @t=œ>Êw¿o‰q@iL¦                         A      ?%GŸ<µfÄ>½ª¯>@¦Í                         ð      @qZ¾ÕÍŠ?´@]…Û                       B\eE   s<&':6Þ¥Oàº
+ò=æ              d      \        Åý          <       ?€     (      Adå        Adå                  (      ?p2˜                      ?p2˜   ¼                           A      @¢©E¾2Ó>htâ@¡¢'                         A      ?r-’=•Ðþ?"Íw>û“W                         ð      @?ÂK=Îb¨¿\ê¯@"ÜÜ                       BS£z   zù²#p}Þb<ºÈ
+ú>              d      \        Åý          <       ?€     (      A"Èo        A"Èo                  (      ?p2˜                      ?p2˜   ¼                           A      @õ¾ ¼äg¾8Ëý@õ*,                         A      ?A¼¦˜‘?¯ >Ví                         ð      @+j>=EÓ¾²øA@^                       BH   ÔÇÂ#rÂ½}Eù'˜¸‚              d      \        Åý          <       ?€     (      A4†b        A4†b                  (      ?p2˜                      ?p2˜   ¼                           A      @Í0ÿ>ú«?xiÊ@Ê+^                         A      ?y)¿?¾ñx²>º”                         ð      @š¼õ>ì Ê¾ÿZâ@“@,                       BiÝå   (Ôž±N“`ühèæ]e2ó              d      \        Åý          <       ?€     (      A<‡        A<‡                  (      ?p2˜                      ?p2˜   ¼                           A      @¢Ý>•Â>Ç'ü@ ‘l                         A      ?ŸXV¿(Š¿2b?                         ð      @u"Þ>»<ˆ>öÉ@dD                       B]”T   pP¦h+.B3 {Ìmød°              d      \         Åý          <       ?€     (      AuT        AuT                  (      ?p2˜                      ?p2˜   ¼                           A      @¾öm¾,Ö€¾®Ž@½ë                         A      ?„IÁ?+ƒ›>PÉD?ñ                         ð      @Ð:¿ Mü>Rö@à                       Bš Þ   ?D¬%Ô@b¨‡Oß(y              d      \      !  Åý          <       ?€     (      @úï        @úï                  (      ?p2˜                      ?p2˜   ¼                           A      @±.ù?/ìO?‚´@®$]                         A      ?k£¿¿I¾„'Ý?Š„                         ð      @Ç7¾4´¾ Ý‹?ðe¤                       B”ƒâ   L$?ìuSA
+ i]Óñ              d      \      "  Åý          <       ?€     (      @Ù
+Æ        @Ù
+Æ                  (      ?p2˜                      ?p2˜   ¼                           A      @vçœ>$L¾Âw@s…˜                         A      ?.LÕ=L<>ê=É=·ØU                         ð      @K§b¾;3T½ ÁI@8Ñ2                       B‹ºµ   %XÈÛj¿éí³4p6Í              d      \      #  Åý          <       ?€     (      @ÏüÒ        @ÏüÒ                  (      ?p2˜                      ?p2˜   ¼                           A      @pä^¾Ã9*>®fÈ@l                          A      ?;	>AAª¾ð†û><$ë                         ð      @<_¨>E0ª>@h@'¨U                       Bj   H™×ëN¿œM¯¤¬Ø½              d      \      $  Åý          <       ?€     (      A6ÿ–        A6ÿ–                  (      ?p2˜                      ?p2˜   ¼                           A      A÷>¡"?	ûóA“®                         A      ?FSs¾Òé¾ž]–>úÍ                         ð      ?ä,¾.5[¾k4ž?”«ù                       B‹ §   ù+&bÒ9EÙjH1!3B              d      \      %  Åý          <       ?€     (      A
+Z        A
+Z                  (      ?p2˜                      ?p2˜   ¼                           A      @–BY=îÿ|>3‰@•F;                         A      ?¹L'¿:Ò¿3ãœ?h›                         ð      @\JR?ò)?X@Dµ                       B™W|   EÇk3Ib'ÊÎ2C´¢              d      \      &  Åý          <       ?€     (      @ôMÝ        @ôMÝ                  (      ?p2˜                      ?p2˜   ¼                           A      @¥h¸¿¤Ó>†ÜŽ@£                         A      ?·‡S¾Tœ{¾Ë3N?¢};                         ð      ?ü&Ž?<Ëò>­? |6                       BªÄ   R×Žpxµè£ç@@£ì              d      \      '  Åý          <       ?€     (      A ß        A ß                  (      ?p2˜                      ?p2˜   ¼                           A      @¾Õ=_Õ€¾3P@½Ð»                         A      ?@GÂ>!Ú·>çA;>šÒ}                         ð      @.Š¾YÐ¾µ“?â¯p                       B^Y#   |»š„D½Ü	G»QSB              d      \      (  Åý          <       ?€     (      @ì,œ        @ì,œ                  (      ?p2˜                      ?p2˜   ¼                           A      @•òë?9l¿…>g@X^                         A      ?S¾Ïfð>´Aé?\'ç                         ð      @ V‡¾Î?0[Ú@ ž                       B^@”   VN~´SÝ"‘X¯&½              d      \      )  Åý          <       ?€     (      A[4        A[4                  (      ?p2˜                      ?p2˜   ¼                           A      @ØC™?
+C ½y58@Öûã                         A      ?Ir˜¿ m=­Œ>0)Ó                         ð      @N• =+ÖÙ¼Á·¿@<rn                       B‹³Y   ,(Ê+MD¹qZ7iDé]œ              d      \      *  Åý          <       ?€     (      A1±        A1±                  (      ?p2˜                      ?p2˜   ¼                           A      @Hz°> •þ?…¯û@:,µ                         A      @/²º?Lˆ‚¿e‹ @Íf                         ð      @d¦¿l®¾QY@KÌ©                       B‡G   BkiñSÇÍlU¨û&Ê’ß              d      \      +  Åý          <       ?€     (      @ÔÓâ        @ÔÓâ                  (      ?p2˜                      ?p2˜   ¼                           A      @p¾zm½æa^@	f¸                         A      ?\ÿ
+>à9Í¿ |Ñ>v6                         ð      @‚¾š|–?Hý@ˆnÖ                       BžB%   ¥ÍSÒÛ'Ã‹‡jª7€              d      \      ,  Åý          <       ?€     (      AÉ4        AÉ4                  (      ?p2˜                      ?p2˜   ¼                           A      @¼Ýò>Oµ¾`@»öz                         A      ?oÊs¿ž>ò½t>¥ôŠ                         ð      @Y‚õ>²\¹¾‚·o@FyJ                       Bnž‰   ;À^¼'Cjóc¯—”              d      \      -  Åý          <       ?€     (      AÉZ        AÉZ                  (      ?p2˜                      ?p2˜   ¼                           A      @ž± ¾BÌ¿T½¹@›‡–                         A      ?6'\>õf!=Íb&>•?                         ð      @Œ#¾”b;?;u@ƒ6t                       B†í   K»¹
+Æ7ýËÝ              d      \      .  Åý          <       ?€     (      A_Ñ        A_Ñ                  (      ?p2˜                      ?p2˜   ¼                           A      @Ã`Û¿CÐ>ÕVÞ@À¾é                         A      ?Vñu>–¸j=þ(l?mU                         ð      @	Ö>ï_6¿
+p|?ÃL8                       BHÙV   g.¡K¸KNm²ÒCÂTT              d      \      /  Åý          <       ?€     (      @þc»        @þc»                  (      ?p2˜                      ?p2˜   ¼                           A      @i‡=gO6¿>,@c¤S                         A      ?’Ik>ÔÁ"?Eä?
+bP                         ð      @ƒOq¾ñ«¾.—“@vŠ                       Bp±ß   ]ðùWIfúq1XE71PÍ              d      \      0  Åý          <       ?€     (      @âwÎ        @âwÎ                  (      ?p2˜                      ?p2˜   ¼                           A      @Ž³¿ ©œ¾ze@Œ
+                         A      ?ºò*?Ks”½íì?ŽÇÿ                         ð      @eÈ¾•“ð>¸‡4?Êîû                       B€l˜   l†!Î+‹<!zACCéo              d      \      1  Åý          <       ?€     (      Aš°        Aš°                  (      ?p2˜                      ?p2˜   ¼                           A      @ÑŽ¾-l¾èkÖ@Ðaé                         A      ?ÖjL¾ /Ë?,"€?¸Û†                         ð      ?àLj>¦Íè¾_²U?ŠrU                       BWpt   >ûÚN<a;QÖ”UeÉv              d      \      2  Åý          <       ?€     (      @ü»        @ü»                  (      ?p2˜                      ?p2˜   ¼                           A      @ƒU >„Õ¿Ì@€µ»                         A      ?Ã¹¼ËÆ?…Jê?€DÀ                         ð      @KÜ ¾nÅÑ¾ã“@6­                        BTg
+   k™öW8÷Ú*(oË‹I              d      \      3  Åý          <       ?€     (      @íñ¾        @íñ¾                  (      ?p2˜                      ?p2˜   ¼                           A      @wÙø¾Ä@›=*é@t–}                         A      ?CþJ>£V.¾ï­©>3/                         ð      @o˜=ƒ©µ>Új@]éÍ                       Bh»&   t¢ö°[’)ùJ+h™÷              d      \      4  Åý          <       ?€     (      @Î,ã        @Î,ã                  (      ?p2˜                      ?p2˜   ¼                           A      @æP¿D¿}¾"Ú@|þÙ                         A      ?€ÉÎ?°º>&!?B                         ð      @4å>;¼ûR5?ò§8                       BI¡   +Ü’¤VD>a~Eecw˜	Ó              d      \      5  Åý          <       ?€     (      A1¦        A1¦                  (      ?p2˜                      ?p2˜   ¼                           A      A	™ã¾5š¿pŠëA†×                         A      ?`dQ>ËÙÆ;ô|?à¦                         ð      @!ö ¾y}ò?n¡ó?÷.%                       BÞ¶   fÁ
+Qy$2^ÿ"hø¹              d      \      6  Åý          <       ?€     (      @ÌýÆ        @ÌýÆ                  (      ?p2˜                      ?p2˜   ¼                           A      @ÎÃ>±Î¾§4s@€v                         A      ?. Â>t*þ¾6À?>¸Ä¤                         ð      @â|¾½nf?JI?ÇÄ                       B†«ø   $)ºðNéAQ÷Ùñ(´È              d      \      7  Åý          <       ?€     (      @ÎFä        @ÎFä                  (      ?p2˜                      ?p2˜   ¼                           A      @iŒü>­Èk>¦á{@eo}                         A      ?
+iä=„¾^g—¼®z                         ð      @Lrù¾½é|½Þ¶Á@8zV                       Bxõ/   X¼§z+Lf|bÐ\ôDÑ              d      \      8  Åý          <       ?€     (      A$7        A$7                  (      ?p2˜                      ?p2˜   ¼                           A      @±†¸¾N\´¿hðÐ@®Iî                         A      ?h&n¾."Ô?ãÈ>æJŠ                         ð      @3†v>¾?Ä>¤@3¯                       B‚kî   rmxÑvÑô|d¡êáVOyÆ              d      \      9  Åý          <       ?€     (      @ÜR        @ÜR                  (      ?p2˜                      ?p2˜   ¼                           A      @–O®¾¿>ãgp@”ºÅ                         A      ?(ß>›¶Å¾‡íˆ>,·6                         ð      @Ùº¾#TÊ¾6óÑ@c3                       B˜7   \OqòzÀ¨™{à´¡              d      \      :  Åý          <       ?€     (      @Ú!¶        @Ú!¶                  (      ?p2˜                      ?p2˜   ¼                           A      @™vÑ>Õ*Ž>1í@—ýñ                         A      ?*®¾?q¾];§=¼|Œ                         ð      @Ä¾ˆ
+Ö=Šv?üÇL                       B‹<   {m©œ~6ÿØ78ã¬4¢“þ              d      \      ;  Åý          <       ?€     (      A-!Ÿ        A-!Ÿ                  (      ?p2˜                      ?p2˜   ¼                           A      @Ëñý?>1 >
+]{@Éä?                         A      ?DZ¾æ›>¶%·=ü"/                         ð      @“ÌD¾•Æñ¾ûTu@Œnv                       BÌ¢   Ä²__ WbVW7              d      \      <  Åý          <       ?€     (      @ÒM        @ÒM                  (      ?p2˜                      ?p2˜   ¼                           A      @|Ï—>mòº¾Êzb@yå                         A      ?6]ú½´y >õc>'ù                         ð      @5¨+¾¶*½ªP@ h                       Bjó·   ¬ÕÏ[üW<`ï¡Á%;LÒ              d      \      =  Åý          <       ?€     (      A#CV        A#CV                  (      ?p2˜                      ?p2˜   ¼                           A      @ÁÛw¿:?@Õ@@¾ål                         A      ?;¸€>ò+¾n¸;>ªI                         ð      @‹:y=œ#¿'2@ƒ“î                       Bdä¯   v\RËF1ÕqÚõe¾<              d      \      >  Åý          <       ?€     (      A·        A·                  (      ?p2˜                      ?p2˜   ¼                           A      @Y.I¾Ö¾¥¿,bÀ@PÉ                         A      @=ã>V-?©n.@%ç5                         ð      @0œø>•“Ž¿&y›@,3                       BNa¨   Ay¬ÛPæS	`~ˆ7              d      \      ?  Åý          <       ?€     (      A*õ²        A*õ²                  (      ?p2˜                      ?p2˜   ¼                           A      @Æ7†=¼!š<¿6à@Å&                         A      ?Ÿè=ïÙ’>ŽK™¾
+¼                         ð      @šÆ4¾Uý–¾š?@”k”                       BM(P    napƒåP-°dE              d      \      @  Åý          <       ?€     (      @Ì¸Ê        @Ì¸Ê                  (      ?p2˜                      ?p2˜   ¼                           A      @‘’r¾0<½ñ—z@Ž÷                         A      ?;Ec½Š />ÏÕ>³ÑY                         ð      @‡ý>uT¾’¥ö?Ã²ö                       Bâ­   ¾­'ÊV%L9lå”              d      \      A  Åý          <       ?€     (      A	        A	                  (      ?p2˜                      ?p2˜   ¼                           A      @‚Vq>Y·q½3¤Ñ@0ª                         A      ?Jßá¾œjÁ?3H=àà*                         ð      @”l=¾<#¾÷ñõ@d                       B–C   FQé‹@qØ£~²ËëJ¶ü£              d      \      B  Åý          <       ?€     (      A0¿+        A0¿+                  (      ?p2˜                      ?p2˜   ¼                           A      @¼1V¾½”p½éAW@»H                         A      ?;ê÷>ùn?>v#‹»)Úµ                         ð      @«Õõ½ïg=¾‚à@¦uI                       Bd½]   o3ÆÆ<h<ýU ]½ƒÛa              d      \      C  Åý          <       ?€     (      @Úë        @Úë                  (      ?p2˜                      ?p2˜   ¼                           A      @w<ý¼EæB@u–u                         A      ?4bÛ¾ðÐÖ¾ +‹>!                         ð      @K”¸>ìÈ>‰ï@6•P                       B›85   éÆY/É GC±[ÙV              d      \      D  Åý          <       ?€     (      A ¼H        A ¼H                  (      ?p2˜                      ?p2˜   ¼                           A      @œ;{¾µV?+tÍ@™‡v                         A      ?¦À-?•¿+úI?K=B                         ð      @3&¹¾‚ß;|@â                       Bm   \­Šy@ÀiéjÕÇ¢Ð              d      \      E  Åý          <       ?€     (      @ß        @ß                  (      ?p2˜                      ?p2˜   ¼                           A      @’öy¾“½>,xP@‘¸Ó                         A      ?´ å?/—-=£Ÿ±?‚ÿ                         ð      ?ôBŸ¾Ì¾~H(?¥Ð                       BŠRÇ   JkNbc§ÿj¡XHØ*              d      \      F  Åý          <       ?€     (      @ÝŽa        @ÝŽa                  (      ?p2˜                      ?p2˜   ¼                           A      @œ­I½¶LB¾M·„@›¸B                         A      ?[ÌÕ>ò«æ>pg>ìÄ‘                         ð      @Û ¾ÅÕ½	Š?Ì'V                       B§´   |OLðŠ 8_i”EØH2              d      \      G  Åý          <       ?€     (      @ì3        @ì3                  (      ?p2˜                      ?p2˜   ¼                           A      @ò¾`<¼¥¯@Žþ&                         A      ?ˆÈ>Sºd=„[Œ½¤Z<                         ð      @Q:÷<E)Õ½³„÷@?Hì                       B„Õ   Äx–A.fño?Ñ	é·p              d      \      H  Åý          <       ?€     (      A+ÈS        A+ÈS                  (      ?p2˜                      ?p2˜   ¼                           A      @÷Ï­?Lé?‰H@õÐÊ                         A      ?ŒÓk¿D6¾Ôñ?$U                         ð      @5$â>*á4¾æ(@6¡                       Bó   LãÂ©h9"y€g1íÎ“              d      \      I  Åý          <       ?€     (      Auf        Auf                  (      ?p2˜                      ?p2˜   ¼                           A      @Òi¾‹— ¾¶B@Ñ                          A      ?„Ñ?6õ>zv?/y                         ð      @/t®¾âRy=‚Â@	˜                       Bc<   R"Ù+.=C]êÚP>‹              d      \      J  Åý          <       ?€     (      AO>        AO>                  (      ?p2˜                      ?p2˜   ¼                           A      @Ôþ¿6£å¾/Í@Ò>2                         A      ?d›ô?6½”á€>ÿz                         ð      @â¤>*.½>g ?Ñ¢¢                       BgR¦   Rr‘b^~1é"D,X› Y              d      \      K  Åý          <       ?€     (      AÔq        AÔq                  (      ?p2˜                      ?p2˜   ¼                           A      @¤bt=ÍtÜ?••ÿ@ŸB´                         A      ?(SÁ=Z÷D¾®Lû>‡Wf                         ð      @X„¾x?¿T€@?án                       BIz   r«ÝKHÆq¾rlAV¢ê              d      \      L  Åý          <       ?€     (      @ä¢J        @ä¢J                  (      ?p2˜                      ?p2˜   ¼                           A      @\È¿3…¾ãÌ[@UÊ±                         A      @R?ƒ|û>æÊã@ ;è                         ð      @6¤¾õŒá»¿¡Þ?æ{ø                       Bh^Ì   ;<4+õ;M1Wðœ              d      \      M  Åý          <       ?€     (      @â®(        @â®(                  (      ?p2˜                      ?p2˜   ¼                           A      @–“‚?'9I¾/û@”8D                         A      ?`B»¾Åÿ¾ÁÊ>öæ¦                         ð      @1E¾ˆÔ“?ä?üæ                       B‹t   –,ÌpsÌTO„Œö6S              d      \      N  Åý          <       ?€     (      @ÍC?        @ÍC?                  (      ?p2˜                      ?p2˜   ¼                           A      @mê„>Kú‰¿âð@i$ß                         A      ?M7+¿Òz=Y‘>«~!                         ð      @5ZÕ>«§°>÷:®@ñÚ                       B—Ž$   rHÆJZnšZv%              d      \      O  Åý          <       ?€     (      @ðÉ»        @ðÉ»                  (      ?p2˜                      ?p2˜   ¼                           A      @žbe>ÇWI>Áz@œ£                         A      ?{„ê¾¬ëê¿F\>ø!Í                         ð      @!ú½SZú>nê|@	I                       BK©9   'æ’¸¶ýs•îŠOŽ¼              d      \      P  Åý          <       ?€     (      @ñXü        @ñXü                  (      ?p2˜                      ?p2˜   ¼                           A      @£5'¿‡E„>=q@žÎ[                         A      ?pªL=k„n<å½Ü?L'³                         ð      @)½?ÒÁ¾9õ,?äª                       Bƒðw   c³jGËäyJý³«T*ô              d      \      Q  Åý          <       ?€     (      @ðb        @ðb                  (      ?p2˜                      ?p2˜   ¼                           A      @¦,M>ªRÃ=‚|@¥¡                         A      ?zåm¿%¿„=Ëç?	RG                         ð      @ýv>¡,F¾&ýü?çã                       BŠ'}   ¶´jsVºûîØ1              d      \      R  Åý          <       ?€     (      @Üë¥        @Üë¥                  (      ?p2˜                      ?p2˜   ¼                           A      @]µ´>†eŽ¿t$@X>Ž                         A      ?•çá½åa‚?YÄº? 7“                         ð      @M:L¾[¾¨¡-@9ŠØ                       Byß@   ?<ôKZB]¨Æ.Jt              d      \      S  Åý          <       ?€     (      @ï©Ë        @ï©Ë                  (      ?p2˜                      ?p2˜   ¼                           A      @½‰-½äû¾\@¼·¨                         A      ?
+fˆ=ø˜9=íö`>ýx                         ð      ?ûh¼$‘ð=ÊGÐ?¹ˆÝ                       Bˆë   1KÊ³«@ÜCª|,¨®              d      \      T  Åý          <       ?€     (      @Ò=        @Ò=                  (      ?p2˜                      ?p2˜   ¼                           A      @YW¢º°º>¯–s@Ué                         A      ?Aùw=fQ¿Ï>°¾                         ð      @V°À½yáã>TÞU@DÕû                       BvK4   ½3*Œ9øA~Õ©$Ðõö              d      \      U  Åý          <       ?€     (      A îØ        A îØ                  (      ?p2˜                      ?p2˜   ¼                           A      @’ L>[“–>ø_@èn                         A      ?
+{¾mc½±<¾¾J¢B                         ð      @¼"g½¨Lf½mgÿ@·JT                       B#Ô   Wz@Õ&ô-B·?Ùî`ë              d      \      V  Åý          <       ?€     (      @ëÞ[        @ëÞ[                  (      ?p2˜                      ?p2˜   ¼                           A      @>Þ)û>]Y­@‹Sx                         A      ?‹x€?&?>‘¢…?Fü                         ð      @3ç¿q;<¿ '®@VÄ                       B˜(*   TXiHq] ‰ ¦s9¡O1              d      \      W  Åý          <       ?€     (      A	¯Ÿ        A	¯Ÿ                  (      ?p2˜                      ?p2˜   ¼                           A      @µµ5½(€i¿ÊÑ@´–                         A      ?Ô«A>âbï¾’¾?¿Œ/                         ð      @¾ÍRâ?^
+°?½¶p                       B[Ýª   3²·äX¸o>V+Î."âþ              d      \      X  Åý          <       ?€     (      A,ž$        A,ž$                  (      ?p2˜                      ?p2˜   ¼                           A      @ë»H=Ê5>„ˆ³@ëÕ                         A      ?ß:¾9«¾•=½¢ú                         ð      @pVÙ=¨"=ÄQ@`ãþ                       Bš)`   dl(wê"Õxòä	ü              d      \      Y  Åý          <       ?€     (      A.7ì        A.7ì                  (      ?p2˜                      ?p2˜   ¼                           A      Alï=Î±¶½HAÿA3‰                         A      ?HGE>½^E<Ï¯Ç>ö<                         ð      ?òMŽ¾ñ
+³<ÀÔ7?¢¡†                       BŠrN   @õ»gŸÒ®\S4úr¯`              d      \      Z  Åý          <       ?€     (      @Üªô        @Üªô                  (      ?p2˜                      ?p2˜   ¼                           A      @0¸W>è™±¾ÐÂ8@)m@                         A      ?Âê¦¾ˆŒ~?}¤ò?l1                         ð      @c4ã¾@h¿CÖ@O2                       B|z   X½f'5¶òä@ùkO@:ã              d      \      [  Åý          <       ?€     (      A¸ý        A¸ý                  (      ?p2˜                      ?p2˜   ¼                           A      @Ôæ?Î>BKy@ÓvZ                         A      ?_>ß!å¾©±¯?/ü©                         ð      @,¡D¿_>å@ø                       BZ]”   Sý'Óun²Á+‡ß€,Âã               d      \      \  Åý          <       ?€     (      A;        A;                  (      ?p2˜                      ?p2˜   ¼                           A      @Èn¿ç¿¾ñ¤j@Ær                         A      ?‰­??*=f">ðûG                         ð      @GW(¾E	‚>ß¦@1èî                       BkÉÜ   |ˆ¼½8¨]âýØ<	B              d      \      ]  Åý          <       ?€     (      @ÙÏ        @ÙÏ                  (      ?p2˜                      ?p2˜   ¼                           A      @J??u¦Ä¿¢ @;®                         A      ?Úûê¿0Ð¾‚HŸ?»Nì                         ð      @7‘¾‰­c?DÆð@Yû                       Bk'à   ' ©•q74Ï‹À:Â³ö              d      \      ^  Åý          <       ?€     (      A`v        A`v                  (      ?p2˜                      ?p2˜   ¼                           A      @ék»Ï­>âáO@è
+T                         A      ?FÉ–;[Üý¿	i[>ˆ	                         ð      @×A;C~==¿Åž@ [                       B_è`   Ò>uò^§jÝKŒ\eÅß              d      \      _  Åý          <       ?€     (      A ”        A ”                  (      ?p2˜                      ?p2˜   ¼                           A      @Ìö9¾@­ç¾Nê@Ì)7                         A      ?uË>£(©=ƒ>ð?@×                         ð      ?ÎQt¾£j>Jœ?g                        B„Ã~   QÀÂR<Gæc<§g9ŸO              d      \      `  Åý          <       ?€     (      @Ú3        @Ú3                  (      ?p2˜                      ?p2˜   ¼                           A      @b74>$;¿‡@\P¸                         A      @Y
+¿1øu?üÆ@ŸÀ                         ð      ?ûÅ;?õ¦=ÔQÚ?¬ë}                       B…{   k“Ò@Qº†ƒæhtÈ¦              d      \      a  Åý          <       ?€     (      @Û×        @Û×                  (      ?p2˜                      ?p2˜   ¼                           A      ?ú^Ý¾	2? H.?éh                         A      @¬¬>$õ¿£œ–?ñµG                         ð      @`Þ±¼ïbt?Fðþ@JRN                       Bb$   /·Ç!¡ÀYJ[k*ž              d      \      b  Åý          <       ?€     (      @ù­        @ù­                  (      ?p2˜                      ?p2˜   ¼                           A      @”"½Öun>ócñ@{²’                         A      ?m¥Ì?,Õk¾Yœm>¯1                         ð      @ti'¿½¾†•»@aÁa                       Bk\a   -]Lˆs£Q=;“4a³%Ô              d      \      c  Åý          <       ?€     (      @ß'ˆ        @ß'ˆ                  (      ?p2˜                      ?p2˜   ¼                           A      @€wà¾´¾xã@~UÊ                         A      ?%ø3=¬ÉY>Ñì§=Þº                         ð      @Oíê=‚r¾*ö>@=™Ì                       BJ‘<   J^¶=WhÅ<mI“F              d      \      d  Åý          <       ?€     (      A’|        A’|                  (      ?p2˜                      ?p2˜   ¼                           A      @”e>`Ž¿<%°@‘&Æ                         A      ?Sîö?½;jÇ>¾qR                         ð      @}>¿D÷?GÜ]@d.<                       B‘hÊ   eì‚TkœÄ´U'-Ã*ÈŒ{            

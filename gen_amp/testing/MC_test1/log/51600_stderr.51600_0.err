@@ -1,0 +1,43 @@
+/jlab_gluex.use not found
+[ERROR] Server responded with an error: [3010] Stating path '/random_triggers/recon-2018_08-ver02.2/run051600_random.hddm' is disallowed.
+
+gen_amp_V2_051600_000_beam.config: No such file or directory
+Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT1 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT3 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT0 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+G4WT2 > Warning from GlueXDetectorConstruction::ConstructSDandField - unsupported sensitive volume TAC1 found in geometry definition.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//section/composition/posXYZ[@volume='DIRC']/@X_Y_Z".
+libraries/HDGEOMETRY/DGeometry.cc:1741 Unable to retrieve DIRC position.
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//composition[@name='forwardTOF_bottom3']/mposY[@volume='FTOL']/@ncopy".
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//composition[@name='forwardTOF_top3']/mposY[@volume='FTOL']/@ncopy".
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//composition[@name='forwardTOF_bottom3']/mposY[@volume='FTOL']/@ncopy".
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//composition[@name='forwardTOF_top3']/mposY[@volume='FTOL']/@ncopy".
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//composition[@name='forwardTOF_bottom3']/mposY[@volume='FTOL']/@ncopy".
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//composition[@name='forwardTOF_top3']/mposY[@volume='FTOL']/@ncopy".
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//composition[@name='forwardTOF_bottom3']/mposY[@volume='FTOL']/@ncopy".
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//composition[@name='forwardTOF_top3']/mposY[@volume='FTOL']/@ncopy".
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//composition[@name='forwardTOF_bottom3']/mposY[@volume='FTOL']/@ncopy".
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//composition[@name='forwardTOF_bottom3']/mposY[@volume='FTOL']/@ncopy".
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//composition[@name='forwardTOF_top3']/mposY[@volume='FTOL']/@ncopy".
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//composition[@name='forwardTOF_top3']/mposY[@volume='FTOL']/@ncopy".
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//composition[@name='forwardTOF_bottom3']/mposY[@volume='FTOL']/@ncopy".
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//composition[@name='forwardTOF_bottom3']/mposY[@volume='FTOL']/@ncopy".
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//composition[@name='forwardTOF_top3']/mposY[@volume='FTOL']/@ncopy".
+src/JANA/JGeometryXML.cc:348 Node or attribute not found for xpath "//composition[@name='forwardTOF_top3']/mposY[@volume='FTOL']/@ncopy".
+ERROR: request for channel number of inactive block!  row 30 column 30
+ERROR: request for channel number of inactive block!  row 28 column 30

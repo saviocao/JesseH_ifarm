@@ -1,0 +1,8 @@
+/particle/select lambda
+/particle/property/decay/select 0
+/particle/property/decay/br 1
+/particle/property/decay/select 1
+/particle/property/decay/br 0
+/particle/property/decay/dump
+/run/beamOn 100
+exit

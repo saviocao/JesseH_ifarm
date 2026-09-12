@@ -1,0 +1,62 @@
+
+This directory contains a collection of Tutorials that utilize AmpTools and supporting
+libraries.  Each directory contains the types of classes that a user might write to
+do a physics analysis using AmpTools.  Check the doc subdirectory of each tutorial
+for more information.
+
+Dalitz
+------
+
+Author:  Ryan Mitchell (remitche@indiana.edu)
+
+A simple example of a Dalitz plot analysis.  It illustrates generating MC and a toy
+data set for fitting.  This example can also be compiled to use MPI and GPU acceleration.
+
+
+RELEASE NOTES:
+
+v0.13.0 (11-Feb-2022):
+
+Revised directory structure to relflect changes overall to the AmpTools build
+system.  Now DalitzLib and DalitzExe are distinct subdirectories.  The former
+is compiled into a single library while the latter contains executables.
+DalitzExe can be moved out the tree and the makefile can be altered to
+link additional libraries if needed.  Most (all?) code is functionally
+equivalent to previous versions.
+
+v0.12 (28-Jun-21):
+
+A new structure for MPI-based fitting is reflected in the fitAmplitudes
+executable.  This allows multiple subsequent fits to be run in a single
+executable, e.g., when fitting with randomized fit parameters.
+
+v0.11 (19-Jan-21):
+
+Removed gammaKK tutorial because it has not been maintained
+and checked for functionality.
+
+Include copyDalitz.py script to copy the Dalitz tutorial to create
+a template that can be edited for a new analysis.
+
+v0.10 (10-Jun-19):
+
+Add ability to precalculate user variables to BreitWigner amplitude inside
+of the Dalitz tutorial.
+
+v0.8 (17-Jun-15):
+
+Fix a bug that appears on some platforms in newer versions of ROOT where the
+user gets "missing dictionary" warnings and occassionally a segmentation
+fault.
+
+Modify all tutorials to remove dependence on CLHEP.
+
+v0.6 (28-Jun-13):
+
+Modify to make compatible with v0.6 of AmpTools.  This mainly involves more complete
+utilization of the new FitResults class.
+
+v0.5 (16-Nov-12):
+
+First release that includes Tutorials.
+
